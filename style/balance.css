@@ -16,6 +16,7 @@ header {
 }
 
 footer {
+  min-width: 286px;
   display: flex;
   padding: 15px;
   gap: 7px;
