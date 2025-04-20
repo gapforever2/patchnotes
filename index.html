@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GAP Forever | Баланс патчи</title>
+    <meta name="description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- META Tags for Social Sharing -->
+    <meta property="og:title" content="GAP Forever | Баланс патчи" />
+    <meta property="og:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gapforever2.github.io/patchnotes/" />
+    <meta property="og:image" content="./assets/images/thumbnail/thumbnail.png" />
+    <meta property="og:image:alt" content="GAP Forever | Баланс патчи" />
+    <meta name="twitter:name" content="GAP Forever" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GAP Forever | Баланс патчи" />
+    <meta name="twitter:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta name="twitter:image" content="./assets/images/thumbnail/thumbnail.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/index.css" />
+    <!-- JS -->
+    <script src="./scripts/main.js"></script>
+    <script defer="defer">
+      document.addEventListener("DOMContentLoaded", setBackground);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="block text-center">
+        <h1>
+          <img alt="UEF Faction Logo" class="UEF" src="./assets/images/faction/UEF.svg" loading="lazy" />
+          <img alt="Cybran Faction Logo" class="CYBRAN" src="./assets/images/faction/Cybran.svg" loading="lazy" />
+          GAPForever <img class="logo" src="./assets/images/faction/gaf-logo.svg" /> Патчноуты
+          <img alt="Aeon Faction Logo" class="AEON" src="./assets/images/faction/Aeon.svg" loading="lazy" />
+          <img alt="Seraphim Faction Logo" class="SERAPHIM" src="./assets/images/faction/Seraphim.svg" loading="lazy" />
+        </h1>
+      </header>
+      <main>
+        <section class="block balance-patches-wrapper">
+          <h2>Баланс патчи</h2>
+          <ul class="balance-patches">
+            <!--renders automatically-->
+            <script>
+              renderPatchList(".balance-patches", "./assets/data/patches.json");
+            </script>
+          </ul>
+        </section>
+        <!-- Support Section -->
+        <section class="block">
+          <h2>Репорт багов</h2>
+          <p>
+            Если нашёл ошибку описании баланс патча или не согласен с текущим балансом, можешь написать в
+            <a href="https://discord.com/channels/1049712950170103858/1160546078698000394" target="_blank" rel="noopener noreferrer">канал</a>
+            на нашем Discord сервере. Если нашёл баг на сайте, можешь написать также в калан или в раздел
+            <a href="https://github.com/gapforever2/patchnotes/issues" target="_blank" rel="noopener noreferrer">Issues</a>
+            (только для багов) на GitHub.
+          </p>
+        </section>
+      </main>
+      <footer class="block">
+        <p class="deprecation-notice">
+          <a href="https://gapforever.com/" target="_blank">GapForever.com</a> | <a href="https://discord.gg/gsTAGgHM" target="_blank" rel="noopener noreferrer">Discord сервер</a> |
+          <span class="only-web"><a href="https://gapforever2.github.io/spooky-db/" target="_blank" rel="noopener noreferrer">GAP Forever Units</a> |</span>
+          <a tabindex="0" onclick="toggleTheme()" onkeypress="toggleTheme()" class="clickable">Сменить тему на <i class="theme-icon fa-solid fa-moon"></i></a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

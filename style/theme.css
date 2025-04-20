@@ -1,0 +1,122 @@
+/* Dark Mode Variables */
+:root {
+  /* Background Colors */
+  --Background: #222831;
+  --FooterBackground: #45484f;
+  --IndexGridBackground: rgba(57, 62, 70, 0.85);
+  --IconGridBackground: #45484f;
+
+  /* Text Colors */
+  --Text: #f5f5f5;
+  --Top: #000;
+
+  /* Card & group Colors */
+  --Card: #393e46;
+  --group: #45484f;
+
+  /* Tags */
+  --buff: rgba(86, 167, 39, 0.7);
+  --nerf: rgba(172, 31, 31, 0.7);
+  --stats: rgba(0, 0, 0, 0.6);
+  --removed: rgba(190, 92, 0, 0.6);
+  --added: rgba(31, 52, 172, 0.7);
+
+  /* Link Colors */
+  --Link-Card: #000;
+  --Link-Unvisited: #cbdeff;
+  --Link-Hover: #89a3ff;
+  --Link-Visited: #c7a2ff;
+
+  /* Other */
+  --Strike: #aaa;
+  --Line: #444;
+  --LM-HR: #555;
+  --ButtonBackground: #4474c1;
+  --ButtonText: #fff;
+  --IconGlow: rgba(255, 255, 255, 0.7);
+}
+
+/* Light Mode Variables */
+:root.light-mode {
+  /* Background Colors */
+  --Background: #f2f2f2;
+  --FooterBackground: #e0e0e0;
+  --IndexGridBackground: rgba(220, 220, 220, 0.85);
+  --IconGridBackground: #e0e0e0;
+
+  /* Text Colors */
+  --Text: #111;
+  --Top: #000;
+
+  /* Card Colors */
+  --Card: #f5f5f5;
+  --group: #e0e0e0;
+
+  /* Tags */
+  --buff: rgba(76, 142, 34, 0.8);
+  --nerf: rgba(150, 40, 40, 0.75);
+  --stats: rgba(0, 0, 0, 0.4);
+  --removed: rgba(185, 80, 20, 0.7);
+  --added: rgba(50, 90, 200, 0.75);
+
+  /* Link Colors */
+  --Link-Card: #ffffff;
+  --Link-Unvisited: #0066c3;
+  --Link-Hover: #002650;
+  --Link-Visited: #541680;
+
+  /* Other */
+  --Strike: #666;
+  --Line: #bbb;
+  --LM-HR: #aaa;
+  --ButtonBackground: #4474c1;
+  --ButtonText: #fff;
+  --IconGlow: #0003;
+}
+
+/* Faction Images */
+.UEF,
+.AEON,
+.CYBRAN,
+.SERAPHIM {
+  width: 35px;
+  height: 35px;
+}
+
+.UEF {
+  filter: invert(44%) sepia(87%) saturate(705%) hue-rotate(171deg) brightness(77%) contrast(65%);
+}
+body[data-theme="dark"] .UEF {
+  filter: invert(44%) sepia(87%) saturate(705%) hue-rotate(171deg) brightness(98%) contrast(94%);
+}
+
+.AEON {
+  filter: invert(55%) sepia(12%) saturate(1600%) hue-rotate(73deg) brightness(80%) contrast(82%);
+}
+body[data-theme="dark"] .AEON {
+  filter: invert(61%) sepia(12%) saturate(2280%) hue-rotate(73deg) brightness(95%) contrast(82%);
+}
+
+.CYBRAN {
+  filter: invert(20%) sepia(47%) saturate(2292%) hue-rotate(335deg) brightness(120%) contrast(107%);
+}
+body[data-theme="dark"] .CYBRAN {
+  filter: invert(20%) sepia(47%) saturate(2292%) hue-rotate(335deg) brightness(156%) contrast(107%);
+}
+
+.SERAPHIM {
+  filter: invert(55%) sepia(39%) saturate(1931%) hue-rotate(353deg) brightness(77%) contrast(88%);
+}
+body[data-theme="dark"] .SERAPHIM {
+  filter: invert(74%) sepia(39%) saturate(1931%) hue-rotate(353deg) brightness(105%) contrast(104%);
+}
+
+/* Logo */
+body[data-theme="dark"] .logo,
+.logo-invert {
+  filter: invert(90%);
+}
+body[data-theme="dark"] .logo-invert,
+.logo {
+  filter: invert(5%);
+}

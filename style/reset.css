@@ -1,0 +1,100 @@
+/* Reset CSS */
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Background);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--Text);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--Link-Unvisited);
+  text-decoration: underline;
+  font-weight: bold;
+}
+a:visited {
+  color: var(--Link-Visited);
+}
+a:hover {
+  color: var(--Link-Hover);
+}
+a:active {
+  color: var(--Link-Active);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.875rem; /* 30px */
+}
+h2 {
+  font-size: 1.5625rem; /* 25px */
+}
+h3 {
+  font-size: 1.25rem; /* 20px */
+}
+
+s {
+  color: var(--Strike);
+}
+
+img {
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  background: var(--FooterBackground);
+  padding: 10px 0 5px;
+}
+
+/* Flexbox Utility Classes */
+.FlexboxContainer {
+  display: flex;
+}
+
+.FlexGrow-1 {
+  flex-grow: 1;
+}
+
+.FlexGrow-4 {
+  flex-grow: 4;
+}
+
+/* additional styles */
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clickable {
+  cursor: pointer;
+}

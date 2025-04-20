@@ -1,0 +1,500 @@
+{
+  "balance": [],
+  "game": [
+    {
+      "patch": "3748",
+      "link": "pages/game2022/3748.html",
+      "date": "2022-11-16"
+    },
+    {
+      "patch": "3747",
+      "link": "pages/game2022/3747.html",
+      "date": "2022-11-15"
+    },
+    {
+      "patch": "3746",
+      "link": "pages/game2022/3746.html",
+      "date": "2022-11-06"
+    },
+    {
+      "patch": "3745",
+      "link": "pages/game2022/3745.html",
+      "date": "2022-11-06"
+    },
+    {
+      "patch": "3744",
+      "link": "pages/game2022/3744.html",
+      "date": "2022-08-25"
+    },
+    {
+      "patch": "3743",
+      "link": "pages/game2022/3743.html",
+      "date": "2022-08-23"
+    },
+    {
+      "patch": "3742",
+      "link": "pages/game2022/3742.html",
+      "date": "2022-08-21"
+    },
+    {
+      "patch": "3741",
+      "link": "pages/game2022/3741.html",
+      "date": "2022-08-21"
+    },
+    {
+      "patch": "3740",
+      "link": "pages/game2022/3740.html",
+      "date": "2022-06-23"
+    },
+    {
+      "patch": "3739",
+      "link": "pages/game2022/3739.html",
+      "date": "2022-06-20"
+    },
+    {
+      "patch": "3738",
+      "link": "pages/game2022/3738.html",
+      "date": "2022-06-19"
+    },
+    {
+      "patch": "3737",
+      "link": "pages/game2022/3737.html",
+      "date": "2022-05-15"
+    },
+    {
+      "patch": "3736",
+      "link": "pages/game2022/3736.html",
+      "date": "2022-05-06"
+    },
+    {
+      "patch": "3735",
+      "link": "pages/game2022/3735.html",
+      "date": "2022-04-24"
+    },
+    {
+      "patch": "3734",
+      "link": "pages/game2022/3734.html",
+      "date": "2022-04-22"
+    },
+    {
+      "patch": "3733",
+      "link": "pages/game2022/3733.html",
+      "date": "2022-04-22"
+    },
+    {
+      "patch": "3732",
+      "link": "pages/game2022/3732.html",
+      "date": "2022-04-22"
+    },
+    {
+      "patch": "3731",
+      "link": "pages/game2021/3731.html",
+      "date": "2021-12-30"
+    },
+    {
+      "patch": "3730",
+      "link": "pages/game2021/3730.html",
+      "date": "2021-12-22"
+    },
+    {
+      "patch": "3729",
+      "link": "pages/game2021/3729.html",
+      "date": "2021-12-20"
+    },
+    {
+      "patch": "3728",
+      "link": "pages/game2021/3728.html",
+      "date": "2021-12-20"
+    },
+    {
+      "patch": "3727",
+      "link": "pages/game2021/3727.html",
+      "date": "2021-11-28"
+    },
+    {
+      "patch": "3726",
+      "link": "pages/game2021/3726.html",
+      "date": "2021-12-20"
+    },
+    {
+      "patch": "3725",
+      "link": "pages/game2021/3725.html",
+      "date": "2021-12-20"
+    },
+    {
+      "patch": "3724",
+      "link": "pages/game2021/3724.html",
+      "date": "2021-10-04"
+    },
+    {
+      "patch": "3717",
+      "link": "pages/game2020/3717.html",
+      "date": "2020-09-13"
+    },
+    {
+      "patch": "3716",
+      "link": "pages/game2020/3716.html",
+      "date": "2020-09-12"
+    },
+    {
+      "patch": "3715",
+      "link": "pages/game2020/3715.html",
+      "date": "2020-09-12"
+    },
+    {
+      "patch": "3713",
+      "link": "pages/game2020/3713.html",
+      "date": "2020-04-06"
+    },
+    {
+      "patch": "3712",
+      "link": "pages/game2020/3712.html",
+      "date": "2020-04-04"
+    },
+    {
+      "patch": "3711",
+      "link": "pages/game2020/3711.html",
+      "date": "2020-03-15"
+    },
+    {
+      "patch": "3710",
+      "link": "pages/game2020/3710.html",
+      "date": "2020-01-26"
+    },
+    {
+      "patch": "3708",
+      "link": "pages/game2019/3708.html",
+      "date": "2019-10-19"
+    },
+    {
+      "patch": "3707",
+      "link": "pages/game2019/3707.html",
+      "date": "2019-07-14"
+    },
+    {
+      "patch": "3706",
+      "link": "pages/game2019/3706.html",
+      "date": "2019-07-14"
+    },
+    {
+      "patch": "3705",
+      "link": "pages/game2019/3705.html",
+      "date": "2019-07-05"
+    },
+    {
+      "patch": "3703",
+      "link": "pages/game2019/3703.html",
+      "date": "2019-01-13"
+    },
+    {
+      "patch": "3702",
+      "link": "pages/game2018/3702.html",
+      "date": "2018-12-28"
+    },
+    {
+      "patch": "3701",
+      "link": "pages/game2018/3701.html",
+      "date": "2018-10-29"
+    },
+    {
+      "patch": "3700",
+      "link": "pages/game2018/3700.html",
+      "date": "2018-10-20"
+    },
+    {
+      "patch": "3699",
+      "link": "pages/game2018/3699.html",
+      "date": "2018-10-20"
+    },
+    {
+      "patch": "3698",
+      "link": "pages/game2018/3698.html",
+      "date": "2018-09-19"
+    },
+    {
+      "patch": "3697",
+      "link": "pages/game2018/3697.html",
+      "date": "2018-08-17"
+    },
+    {
+      "patch": "3696",
+      "link": "pages/game2018/3696.html",
+      "date": "2018-05-27"
+    },
+    {
+      "patch": "3695",
+      "link": "pages/game2018/3695.html",
+      "date": "2018-01-17"
+    },
+    {
+      "patch": "3694",
+      "link": "pages/game2017/3694.html",
+      "date": "2017-12-25"
+    },
+    {
+      "patch": "3693",
+      "link": "pages/game2017/3693.html",
+      "date": "2017-12-03"
+    },
+    {
+      "patch": "3692",
+      "link": "pages/game2017/3692.html",
+      "date": "2017-12-01"
+    },
+    {
+      "patch": "3690",
+      "link": "pages/game2017/3690.html",
+      "date": "2017-11-16"
+    },
+    {
+      "patch": "3689",
+      "link": "pages/game2017/3689.html",
+      "date": "2017-10-01"
+    },
+    {
+      "patch": "3686",
+      "link": "pages/game2017/3686.html",
+      "date": "2017-08-13"
+    },
+    {
+      "patch": "3682",
+      "link": "pages/game2017/3682.html",
+      "date": "2017-05-16"
+    },
+    {
+      "patch": "3681",
+      "link": "pages/game2017/3681.html",
+      "date": "2017-05-12"
+    },
+    {
+      "patch": "3680",
+      "link": "pages/game2017/3680.html",
+      "date": "2017-05-11"
+    },
+    {
+      "patch": "3677",
+      "link": "pages/game2017/3677.html",
+      "date": "2017-05-03"
+    },
+    {
+      "patch": "3676",
+      "link": "pages/game2017/3676.html",
+      "date": "2017-02-27"
+    },
+    {
+      "patch": "3675",
+      "link": "pages/game2017/3675.html",
+      "date": "2017-02-05"
+    },
+    {
+      "patch": "3672",
+      "link": "pages/game2017/3672.html",
+      "date": "2017-01-24"
+    },
+    {
+      "patch": "3671",
+      "link": "pages/game2017/3671.html",
+      "date": "2017-01-19"
+    },
+    {
+      "patch": "3670",
+      "link": "pages/game2017/3670.html",
+      "date": "2017-01-17"
+    },
+    {
+      "patch": "3669",
+      "link": "pages/game2017/3669.html",
+      "date": "2017-01-17"
+    },
+    {
+      "patch": "3668",
+      "link": "pages/game2017/3668.html",
+      "date": "2017-01-17"
+    },
+    {
+      "patch": "3667",
+      "link": "pages/game2016/3667.html",
+      "date": "2016-12-22"
+    },
+    {
+      "patch": "3666",
+      "link": "pages/game2016/3666.html",
+      "date": "2016-12-21"
+    },
+    {
+      "patch": "3665",
+      "link": "pages/game2016/3665.html",
+      "date": "2016-12-25"
+    },
+    {
+      "patch": "3664",
+      "link": "pages/game2016/3664.html",
+      "date": "2016-12-21"
+    },
+    {
+      "patch": "3664",
+      "link": "pages/game2016/3664.html",
+      "date": "2016-12-21"
+    },
+    {
+      "patch": "3663",
+      "link": "pages/game2016/3663.html",
+      "date": "2016-11-12"
+    },
+    {
+      "patch": "3660",
+      "link": "pages/game2016/3660.html",
+      "date": "2016-10-24"
+    },
+    {
+      "patch": "3658",
+      "link": "pages/game2016/3658.html",
+      "date": "2016-08-30"
+    },
+    {
+      "patch": "3656",
+      "link": "pages/game2016/3656.html",
+      "date": "2016-08-08"
+    },
+    {
+      "patch": "3654",
+      "link": "pages/game2016/3654.html",
+      "date": "2016-05-30"
+    },
+    {
+      "patch": "3652",
+      "link": "pages/game2016/3652.html",
+      "date": "2016-05-02"
+    },
+    {
+      "patch": "3646",
+      "link": "pages/game2015/3646.html",
+      "date": "2015-08-11"
+    },
+    {
+      "patch": "3644",
+      "link": "pages/game2015/3644.html",
+      "date": "2015-07-27"
+    },
+    {
+      "patch": "3643",
+      "link": "pages/game2015/3643.html",
+      "date": "2015-07-24"
+    },
+    {
+      "patch": "3642",
+      "link": "pages/game2015/3642.html",
+      "date": "2015-07-14"
+    },
+    {
+      "patch": "3641",
+      "link": "pages/game2015/3641.html",
+      "date": "2015-07-12"
+    },
+    {
+      "patch": "3640",
+      "link": "pages/game2015/3640.html",
+      "date": "2015-01-05"
+    },
+    {
+      "patch": "3639",
+      "link": "pages/game2015/3639.html",
+      "date": "2015-01-05"
+    },
+    {
+      "patch": "3637",
+      "link": "pages/game2014/3637.html",
+      "date": "2014-12-14"
+    },
+    {
+      "patch": "3636",
+      "link": "pages/game2014/3636.html",
+      "date": "2014-12-11"
+    },
+    {
+      "patch": "3634",
+      "link": "pages/game2014/3634.html",
+      "date": "2014-09-27"
+    },
+    {
+      "patch": "3633",
+      "link": "pages/game2014/3633.html",
+      "date": "2014-08-02"
+    },
+    {
+      "patch": "3632",
+      "link": "pages/game2014/3632.html",
+      "date": "2014-03-02"
+    },
+    {
+      "patch": "3631",
+      "link": "pages/game2014/3631.html",
+      "date": "2014-03-02"
+    },
+    {
+      "patch": "3630",
+      "link": "pages/game2014/3630.html",
+      "date": "2014-03-01"
+    },
+    {
+      "patch": "3629",
+      "link": "pages/game2014/3629.html",
+      "date": "2014-02-02"
+    },
+    {
+      "patch": "3628",
+      "link": "pages/game2013/3628.html",
+      "date": "2013-07-28"
+    },
+    {
+      "patch": "3626",
+      "link": "pages/game2013/3626.html",
+      "date": "2013-07-25"
+    },
+    {
+      "patch": "3625",
+      "link": "pages/game2013/3625.html",
+      "date": "2013-04-17"
+    },
+    {
+      "patch": "3624",
+      "link": "pages/game2013/3624.html",
+      "date": "2013-04-07"
+    },
+    {
+      "patch": "3620",
+      "link": "pages/game2013/3620.html",
+      "date": "2013-03-01"
+    },
+    {
+      "patch": "3615",
+      "link": "pages/game2012/3615.html",
+      "date": "2012-07-03"
+    },
+    {
+      "patch": "3614",
+      "link": "pages/game2012/3614.html",
+      "date": "2012-04-28"
+    },
+    {
+      "patch": "3610",
+      "link": "pages/game2011/3610.html",
+      "date": "2011-12-09"
+    },
+    {
+      "patch": "3609",
+      "link": "pages/game2011/3609.html",
+      "date": "2011-12-08"
+    },
+    {
+      "patch": "3608",
+      "link": "pages/game2011/3608.html",
+      "date": "2011-10-20"
+    },
+    {
+      "patch": "3606",
+      "link": "pages/game2011/3606.html",
+      "date": "2011-09-14"
+    }
+  ]
+}

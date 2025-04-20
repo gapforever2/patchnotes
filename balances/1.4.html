@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>GAP Forever | Баланс патч 1.4 «New Luntic»</title>
+    <meta name="twitter:title" content="GAP Forever | Баланс патч 1.4 «New Luntic»" />
+    <meta property="og:title" content="GAP Forever | Баланс патч 1.4 «New Luntic»" />
+    <meta property="og:image:alt" content="GAP Forever | Баланс патч 1.4 «New Luntic»" />
+    <!-- META Tags for Social Sharing -->
+    <meta property="og:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gapforever2.github.io/patchnotes/" />
+    <meta property="og:image" content="../assets/images/thumbnail/thumbnail.png" />
+    <meta name="twitter:name" content="GAP Forever" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta name="twitter:image" content="../assets/images/thumbnail/thumbnail.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/balance.css" />
+    <!-- JS -->
+    <script src="../scripts/main.js"></script>
+  </head>
+
+  <body>
+    <main class="Grid">
+      <div id="top" class="Content">
+        <header class="FlexboxContainer">
+          <h1 class="FlexGrow-1"><img class="logo" src="../assets/images/faction/gaf-logo.svg" loading="lazy" alt="GAF" /> Balance</h1>
+          <div class="text-right">Дата обновления: 28.02.2025 г.</div>
+        </header>
+
+        <section class="block group">
+          <h2>О патче</h2>
+          <article class="block Card">
+            <h3>Всё меняется!</h3>
+            <p>Всем привет! Это наш ГАФ баланс. Все внесенные изменения могут быть изменены повторно.</p>
+            <p>
+              <b>Дисклеймер</b>: Внесенные здесь изменения могут быть нарушены или иметь непредвиденные побочные эффекты. Если вы с чем-то столкнетесь, пожалуйста, сообщите об этом в отдел баланса на
+              сайте. Игровые баги <a href="https://discord.com/invite/3wvXGZHHFp" target="_blank">репортить сюда</a> (канал на сервере GAF Discord).
+            </p>
+            <p>Все изменения, которые в настоящее время внесены в GAF, позволяют нам оценить новый баланс в реальных играх.</p>
+            <p class="text-right">
+              <i><b>Баланс-команда: Isakentyi, Angel, SupremeKiska и Gary_Goodspeed</b></i>
+            </p>
+          </article>
+
+          <article class="block Card">
+            <h3>Баланс патч 1.4 «New Luntic»</h3>
+            <p>
+              В этот раз мы перебалансировали все “ГЕИ”, Т3 артиллерию, исправили баги, переосмыслили и добавили особенности некоторым юнитам. И сегодня дебютирует наш новый юнит! Читайте обо всех
+              изменениях ниже в списке!
+            </p>
+            <p>Все gif-изображения размещены на <a href="https://imgur.com/a/Q2R0lXS" target="_blank">Imgur</a> для экономии места.</p>
+          </article>
+        </section>
+
+        <section class="block group">
+          <h2>Новые фишки</h2>
+
+          <article id="асистщит" class="block Card">
+            <h3><img src="../assets/images/units/aeon/structure/T2SheildGen.png" loading="lazy" /> Ассист щитов</h3>
+            <p>Наши соседи с FAF сделали полезные багфиксы. Поскольку наша команда имеет мало опыта, мы позаимствовали пару изменений.</p>
+            <p>Изменена реакция инженеров при ассисте щитов. Теперь она моментальная и будет спасать во многих ситуациях.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Старый ассист <img src="https://i.imgur.com/PyhBkq6.gif" class="preview" loading="lazy" /></li>
+                  <li>Новый ассист <img src="https://i.imgur.com/TNXW6zW.gif" class="preview" loading="lazy" /></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="тактички" class="block Card">
+            <h3><img src="../assets/images/balances/1.4/missile-shield.png" loading="lazy" /> Поведение тактических ракет по отношению к щитам</h3>
+            <p>
+              Раньше, если тактические ракеты запускались в цель под щитом, все они уничтожались щитом. С исправлением этой ошибки, если вы запускаете 5 тактических ракет в цель под щитом, то 3 из них
+              сбивают щит, а оставшиеся две летят в цель.
+            </p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Было <img src="https://i.imgur.com/8OTwihL.gif" class="preview" loading="lazy" /></li>
+                  <li>Стало <img src="https://i.imgur.com/z8uK4Lk.gif" class="preview" loading="lazy" /></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="мерси" class="block Card">
+            <h3><img src="../assets/images/units/aeon/air/T2Mercy.png" loading="lazy" /> Анимация урона "Мерси"</h3>
+            <p>При перебалансировке юнита “Мерси” возникла проблема с некорректным отображением анимации атаки. Данная проблема была исправлена.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Было <img src="https://i.imgur.com/lrJQwEf.gif" class="preview" loading="lazy" /></li>
+                  <li>Стало <img src="https://i.imgur.com/FMB1bWe.gif" class="preview" loading="lazy" /></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="фулшер" class="block Card">
+            <h3><img src="../assets/images/balances/1.4/fulshare.png" loading="lazy" /> Фул-Шер при смерти</h3>
+            <p>
+              Исправлен баг, при котором в режиме “Фул-Шер” после смерти игрока передаваемые юниты, находящиеся в процессе улучшения, теряли прогресс апгрейда. Теперь можно умирать спокойно — апгрейды
+              не сбросятся.
+            </p>
+          </article>
+
+          <article id="ассист" class="block Card">
+            <h3><img src="../assets/images/orders/assist.png" loading="lazy" /> Ассист</h3>
+            <p>
+              “Имба ассист”. Исправлена проблема, когда даешь приказ на обстройку дальних мексов, то она отменялась. Теперь команда не отменяется, и инженеры идут, как обычно, строить в упор. Если при
+              подходе на рейнж постройки переназначить задачу, они будут строить на рейндже.
+              <img src="../assets/images/balances/1.3/imbaAssist.png" class="preview" loading="lazy" />
+            </p>
+          </article>
+        </section>
+
+        <section class="block group">
+          <h2>Здания</h2>
+
+          <article id="герцог" class="block Card">
+            <h3><img src="../assets/images/units/uef/structure/T3StaticArty.png" loading="lazy" /> Т3 Арта "Герцог"</h3>
+            <p>
+              Мы подняли цену на всю артиллерию на 15% по всем ресурсам: массе, энергии и времени. Это изменение должно усложнить опытным игрокам быстрый выход в Т3 артиллерию к 16-18 минуте.
+              Надеемся, игроки будут искать новые способы побеждать, вместо того, чтобы устраивать артиллерийские перестрелки через всю карту в лейте.
+            </p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>1350000</s> <i class="fa-solid fa-arrow-right"></i> 1552500</li>
+                  <li>Стоимость по массе: <s>72000</s> <i class="fa-solid fa-arrow-right"></i> 82800</li>
+                  <li>Время постройки: <s>115000</s> <i class="fa-solid fa-arrow-right"></i> 132250</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="эммисар" class="block Card">
+            <h3><img src="../assets/images/units/aeon/structure/T3StaticArty.png" loading="lazy" /> Т3 Арта "Эмиссар"</h3>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>1372500</s> <i class="fa-solid fa-arrow-right"></i> 1578375</li>
+                  <li>Стоимость по массе: <s>73200</s> <i class="fa-solid fa-arrow-right"></i> 84180</li>
+                  <li>Время постройки: <s>120000</s> <i class="fa-solid fa-arrow-right"></i> 138000</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="бомба" class="block Card">
+            <h3><img src="../assets/images/units/cybran/structure/T3StaticArty.png" loading="lazy" /> Т3 Арта "Бомбардир"</h3>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>1305000</s> <i class="fa-solid fa-arrow-right"></i> 1500750</li>
+                  <li>Стоимость по массе: <s>69600</s> <i class="fa-solid fa-arrow-right"></i> 80040</li>
+                  <li>Время постройки: <s>105000</s> <i class="fa-solid fa-arrow-right"></i> 120750</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="хова" class="block Card">
+            <h3><img src="../assets/images/units/sera/structure/T3StaticArty.png" loading="lazy" /> Т3 Арта "Ховатам"</h3>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>1327500</s> <i class="fa-solid fa-arrow-right"></i> 1526625</li>
+                  <li>Стоимость по массе: <s>70800</s> <i class="fa-solid fa-arrow-right"></i> 81420</li>
+                  <li>Время постройки: <s>110000</s> <i class="fa-solid fa-arrow-right"></i> 126500</li>
+                  <p>Анимацию смерти ускорили. Теперь взрывается с той же скоростью, что и остальные арты.</p>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Врата" class="block Card">
+            <h3><img src="../assets/images/units/cybran/structure/T3Sonar.png" loading="lazy" /> Т3 сонара (Кибран)</h3>
+            <p>Кибранской сонаре вернули рейндж стелса.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стелс поле радиус: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Псарня" class="block Card">
+            <h3><img src="../assets/images/units/uef/structure/T2EngieStationL1.png" loading="lazy" /> Псарня</h3>
+            <p>Прислушались к умному дядьке и изменили псарни. Уменьшили БП дронов.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>БП дрона: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Хайвы" class="block Card">
+            <h3><img src="../assets/images/units/cybran/structure/T2EngieStationL3.png" loading="lazy" /> Улей (Хайвы)</h3>
+            <p>Хайвы так же изменены, БП порезан и распределен на каждый уровень одинаково.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>БП Хайва: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 14</li>
+                  <li>БП Т2 Хайва: <s>37</s> <i class="fa-solid fa-arrow-right"></i> 28</li>
+                  <li>БП Т3 Хайва: <s>55</s> <i class="fa-solid fa-arrow-right"></i> 42</li>
+                  <p>
+                    Хайвы и псарни понерфили. Это связано с тем, что опытные игроки злоупотребляют этими постройками, и, если построить Парагон, шансы на победу у оппонента стремительно падают. С
+                    таким нерфом игроку, построившему Парагон, будет сложнее наращивать БП.
+                  </p>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Щит" class="block Card">
+            <h3><img src="../assets/images/units/cybran/structure/T3ShieldL5.png" loading="lazy" /> Апгрейд Т3 щита</h3>
+            <p>Улучшаем последний апгрейд т3 щита за кибран</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>ХП: <s>16500</s> <i class="fa-solid fa-arrow-right"></i> 17500</li>
+                  <li>Перезарядка после пробития: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 16</li>
+                  <li>Реген щита: <s>170</s> <i class="fa-solid fa-arrow-right"></i> 190</li>
+                  <li>размер щита: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 42</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="block group">
+          <h2>T1, T2, T3 ленд</h2>
+
+          <article id="Селен" class="block Card">
+            <h3><img src="../assets/images/units/sera/land/T1Scout.png" loading="lazy" /> Селен</h3>
+            <p>Селену дали возможность стрелять из транспортника, прибавили хп и скорость передвижения.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>ХП/МаксХП: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
+                  <li>Скорость передвижения: <s>3.8</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
+                  <li>Способность стрелять с транспорта: <s>false</s> <i class="fa-solid fa-arrow-right"></i> true</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="т1арта" class="block Card">
+            <h3><img src="../assets/images/units/cybran/land/T1MobileArty.png" loading="lazy" /> Снаряд т1 арты (Кибран)</h3>
+            <p>Изменили скорость полета снаряда кибранской т1 арты. Летит быстрее</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Скорость снаряда: <s>14.6</s> <i class="fa-solid fa-arrow-right"></i> 20.6</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Гоплит" class="block Card">
+            <h3><img src="../assets/images/units/cybran/land/T2RangeBot.png" loading="lazy" /> Гоплит</h3>
+            <p>Гоплиту так же дали возможность стрелять с транспортников.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Способность стрелять с транспорта: <s>false</s> <i class="fa-solid fa-arrow-right"></i> true</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Кирпич" class="block Card">
+            <h3><img src="../assets/images/units/cybran/land/T3Tank.png" loading="lazy" /> Кирпич</h3>
+            <p>Кибранафилы плачут и умоляют вернуть кирпич.Мы говорим им НЕТ, но апнули назад скорость. Стало ясно,что если кибранов не педебафывать,то за них невозможно играть.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Вернули скорость передвижения и микрибельность</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="block group">
+          <h2>Геймендеры</h2>
+
+          <article id="Новакс" class="block Card">
+            <h3><img src="../assets/images/units/uef/structure/T4SataliteCenter.png" loading="lazy" /> Новакс</h3>
+            <p>как и Т3 арта, спутник, был понерфлен. Изменили стоимость по всем ресурсам на 10%.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>512000</s> <i class="fa-solid fa-arrow-right"></i> 563200</li>
+                  <li>Стоимость по массе: <s>36000</s> <i class="fa-solid fa-arrow-right"></i> 39600</li>
+                  <li>Время постройки: <s>44800</s> <i class="fa-solid fa-arrow-right"></i> 49280</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Спутник" class="block Card">
+            <h3><img src="../assets/images/units/uef/air/sputnic.png" loading="lazy" /> Спутник</h3>
+            <p>Сам спутник потерпел изменения.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>160000</s> <i class="fa-solid fa-arrow-right"></i> 144000</li>
+                  <li>Стоимость по массе: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 9000</li>
+                  <li>Время постройки: <s>30000</s> <i class="fa-solid fa-arrow-right"></i> 27000</li>
+                  <li>Обзор: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                  <li>Урон: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
+                  <li>Скорость полета: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 12</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Мавор" class="block Card">
+            <h3><img src="../assets/images/units/uef/structure/T4StaticArty.png" loading="lazy" /> Мавор</h3>
+            <p>Мы решили отсрочить душную гонку вооружений, сделав дороже все "ГЕИ" на 15%.</p>
+            <p>Стал дороже по всем ресурсам.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>5994000</s> <i class="fa-solid fa-arrow-right"></i> 6893100</li>
+                  <li>Стоимость по массе: <s>224775</s> <i class="fa-solid fa-arrow-right"></i> 258491</li>
+                  <li>Время постройки: <s>300000</s> <i class="fa-solid fa-arrow-right"></i> 345000</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Скорострелка" class="block Card">
+            <h3><img src="../assets/images/units/aeon/structure/T4RapidArty.png" loading="lazy" /> Избавление "Эонская Скорострелка"/"Сальва"</h3>
+            <p>Стал дороже по всем ресурсам.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>5400000</s> <i class="fa-solid fa-arrow-right"></i> 6210000</li>
+                  <li>Стоимость по массе: <s>202500</s> <i class="fa-solid fa-arrow-right"></i> 232875</li>
+                  <li>Время постройки: <s>100000</s> <i class="fa-solid fa-arrow-right"></i> 115000</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Скатис" class="block Card">
+            <h3><img src="../assets/images/units/cybran/land/T4MobileArty.png" loading="lazy" /> Скатис</h3>
+            <p>Стал дороже по всем ресурсам.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>4000000</s> <i class="fa-solid fa-arrow-right"></i> 4600000</li>
+                  <li>Стоимость по массе: <s>220000</s> <i class="fa-solid fa-arrow-right"></i> 253000</li>
+                  <li>Время постройки: <s>240000</s> <i class="fa-solid fa-arrow-right"></i> 276000</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Елка" class="block Card">
+            <h3><img src="../assets/images/units/sera/structure/T4NukeLauncher.png" loading="lazy" /> Елона-ОС "Елка"</h3>
+            <p>Стала дороже по всем ресурсам.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>10008000</s> <i class="fa-solid fa-arrow-right"></i> 11509200</li>
+                  <li>Стоимость по массе: <s>187650</s> <i class="fa-solid fa-arrow-right"></i> 215798</li>
+                  <li>Время постройки: <s>250000</s> <i class="fa-solid fa-arrow-right"></i> 287500</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Парагоон" class="block Card">
+            <h3><img src="../assets/images/units/aeon/structure/T4ResorceGenerator.png" loading="lazy" /> Парагон</h3>
+            <p>Стал дороже по всем ресурсам.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Стоимость по энергии: <s>7506000</s> <i class="fa-solid fa-arrow-right"></i> 8631900</li>
+                  <li>Стоимость по массе: <s>250200</s> <i class="fa-solid fa-arrow-right"></i> 287730</li>
+                  <li>Время постройки: <s>325000</s> <i class="fa-solid fa-arrow-right"></i> 373750</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="block group">
+          <h2>T2, T3 аир</h2>
+
+          <article id="Т2сера" class="block Card">
+            <h3><img src="../assets/images/units/sera/air/T2Gunship.png" loading="lazy" /> Вулху</h3>
+            <p>В связи с появлением T3 ганшипа Серафимов потребность в “T2.5” ганшипе исчезла. Он будет ослаблен до уровня других ганшипов T2.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>ХП/МаксХП: <s>1800</s> <i class="fa-solid fa-arrow-right"></i> 800</li>
+                  <li>Стоимость по массе: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 220</li>
+                  <li>Стоимость по энергии: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 4600</li>
+                  <li>Время строительства: <s>3300</s> <i class="fa-solid fa-arrow-right"></i> 1600</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Т3сера" class="block Card">
+            <h3><img src="../assets/images/units/sera/air/T3gunship.png" loading="lazy" /> Qozihath (Гозихат)</h3>
+            <p>
+              ВСТРЕЧАЙТЕ!!! Новый Т3 ганшип за серафим, с хорошей альфой и торпедами, но не такой жирный, как ганшипы остальных фракций. Мы надеемся, он хорошо впишется в общий баланс. Мы против того,
+              чтобы добавлялись новые юниты, но мы подумали, лучше внести логичный ганшип на т3 стадии, чем переапывать Т2. Сера т2 ганшипом, из-за его “жирности”, гораздо проще было снайпить
+              опонентов, их было сложно сбить.
+              <img src="../assets/images/balances/1.4/gunship2.png" class="preview" loading="lazy" />
+            </p>
+            <p>P.S.: Идея: Isakentyi, Реализация: KeroT9Ksin</p>
+            <ul>
+              <li>
+                Статы нового юнита
+                <ul>
+                  <li>ХП/МаксХП: 5200</li>
+                  <li>Стоимость по массе: 1300</li>
+                  <li>Стоимость по энергии: 58000</li>
+                  <li>Время строительства: 6000</li>
+                  <li>Урон: 500</li>
+                  <li>ДПС: 200</li>
+                  <li>Дальность атаки: 2-32</li>
+                  <li>Перезарядка: 2.5</li>
+                  <li>Урон торпед: 75</li>
+                  <li>ДПС: 15х2</li>
+                  <li>Дальность атаки торпед: 0-32</li>
+                  <li>Перезарядка: 10</li>
+                  <li>Гидролокатор: 37</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
+
+      <div class="Sidebar">
+        <div class="icon-sidebar-wrapper">
+          <div class="IconSidebar">
+            <div class="icon-sidebar-inner">
+              <div class="IconSidebarSubgrid">
+                <h2 class="IconSidebarTitle">Навигация</h2>
+                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i><br />назад</a>
+                <a href="#top"><i class="fa-solid fa-arrow-up"></i><br />наверх</a>
+                <a tabindex="0" onclick="toggleTheme()" onkeypress="toggleTheme()" class="clickable"><i class="theme-icon fa-solid fa-moon"></i><br />тема</a>
+              </div>
+              <nav class="navigation"><!-- autogenerated navigation --></nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="../index.html">на главную</a> | <a href="#top">наверх</a></p>
+      <p><a href="https://gapforever.com/" target="_blank">GapForever.com</a> © 2015-<span class="year">2025</span></p>
+    </footer>
+  </body>
+</html>

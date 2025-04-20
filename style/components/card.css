@@ -1,0 +1,110 @@
+/* Main Card Styles */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px 20px 20px;
+  border-radius: 20px;
+}
+
+.Card {
+  background: var(--Card);
+  border: 1px solid transparent;
+}
+
+.group {
+  background: var(--group);
+}
+
+/* Card Hover for Interaction */
+.Card:hover {
+  border-color: var(--Link-Unvisited);
+}
+
+/* Any Image Styling */
+.Card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+  object-fit: cover; /* Ensure consistent image aspect ratio */
+}
+
+/* Unit Icon Styling */
+.Card h3 img {
+  margin-bottom: 3px;
+  width: auto;
+  height: 64px;
+}
+
+/* Preview Styling */
+.Card img.preview,
+.Card iframe.preview {
+  max-width: 100%;
+  margin-top: 5px;
+  display: block;
+  border-radius: 10px;
+  overflow-y: hidden;
+}
+.Card img.preview {
+  width: auto;
+}
+.Card iframe.preview {
+  width: 854px;
+}
+
+/* lists */
+.Card ul {
+  padding: 0;
+}
+.Card ul ul {
+  padding: 0;
+  padding-left: 1.5rem;
+}
+.Card ul ul li {
+  list-style: square;
+}
+
+/* Optional Clickable Card */
+.Card.Clickable {
+  cursor: pointer;
+}
+
+.group {
+  background: var(--group);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px 20px 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* Button inside the Card */
+.Card a.button-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background: var(--ButtonBackground);
+  color: var(--ButtonText);
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+.Card a.button-link:hover {
+  background: var(--ButtonHoverBackground);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .block {
+    padding: 15px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .block {
+    padding: 10px;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+# repo files
+.git/
+.gitattributes
+.*ignore
+LICENSE
+
+# images
+*.ico
+*.png
+*.jpg
+*.gif
+*.svg
+*.webp
+
+# dependencies & cashes
+node_modules/

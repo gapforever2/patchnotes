@@ -1,0 +1,104 @@
+@import "default.css";
+
+:root {
+  --block-margin: 20px;
+  --block-padding: 15px 20px;
+}
+
+body {
+  background-color: var(--Background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: var(--block-padding);
+  height: 100vh;
+}
+
+/* Grid and Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header,
+footer,
+section {
+  background: var(--IndexGridBackground);
+  backdrop-filter: blur(5px);
+  padding: var(--block-padding);
+  border-radius: var(--block-margin);
+}
+
+section.block {
+  width: 34%;
+}
+
+section.balance-patches-wrapper {
+  width: 66%;
+}
+
+div.container {
+  width: 100%;
+  max-width: 1200px;
+  flex-direction: column;
+}
+
+main,
+div.container {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--block-margin);
+}
+
+header h1 img {
+  margin: 0 5px;
+}
+
+ul {
+  padding-left: 1.2rem;
+  list-style: square;
+}
+
+span.patch-date {
+  white-space: nowrap;
+}
+
+footer a {
+  white-space: nowrap;
+}
+
+/* logo */
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --block-margin: 10px;
+    --block-padding: 10px 15px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main section.block {
+    width: 100%;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  :root {
+    --block-margin: 5px;
+  }
+
+  body {
+    background-image: none !important;
+  }
+}

@@ -1,0 +1,75 @@
+button {
+  border-radius: 5px;
+  padding: 12px 16px;
+  background: var(--ButtonBackground);
+  color: var(--ButtonText);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+  text-align: center;
+  min-width: 100px; /* Ensures a minimum button width */
+  min-height: 40px;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:hover {
+  filter: brightness(0.9); /* Darkens the background without needing darken() */
+}
+
+button:active {
+  filter: brightness(0.8);
+  transform: scale(0.98); /* Subtle press effect */
+}
+
+/* Focus styles for accessibility */
+button:focus {
+  outline: 3px solid var(--ButtonFocusOutline, #0056b3); /* More visible focus color */
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); /* Add inner glow for better focus effect */
+}
+
+/* Disabled state */
+button:disabled {
+  background: var(--ButtonDisabledBackground, #ccc); /* Light gray background */
+  color: var(--ButtonDisabledText, #777); /* Muted text color */
+  cursor: not-allowed;
+  filter: none;
+}
+
+/* Small and large button classes for flexibility */
+button.small {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+button.large {
+  font-size: 18px;
+  padding: 16px 24px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

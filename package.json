@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "live-server . --port=7700 --middleware=../../.devserver/middleware.js",
+    "format": "prettier --write **/*"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.3"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "tabWidth": 2,
+    "printWidth": 200
+  }
+}
