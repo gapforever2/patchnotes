@@ -1,4 +1,4 @@
-((g) => {
+((window) => {
   // render patch list
   const renderPatchList = async (containerSelector, jsonUrl, type = "balance") => {
     if (!SUPPORTED_TYPES.includes(type)) {
@@ -100,13 +100,49 @@
     document.dispatchEvent(new CustomEvent("theme-change", { detail: savedTheme }));
   };
 
+  const handleThemeChange = ({ detail: theme }) => {
+    const icons = document.querySelectorAll(".theme-icon");
+    if (document.body) {
+      document.body.dataset.theme = theme;
+    }
+    icons.forEach((iconElement) => {
+      if (theme === "light") {
+        iconElement.classList.remove("fa-sun");
+        iconElement.classList.add("fa-moon");
+      } else {
+        iconElement.classList.remove("fa-moon");
+        iconElement.classList.add("fa-sun");
+      }
+    });
+  };
+
   // scrolling
   const scrollSmooth = (event) => {
     event.preventDefault();
-    document.querySelector(event.currentTarget.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+      history.pushState(null, "", `#${targetId}`);
+    }
   };
+
+  const handlePopstateWithSmoothScrolling = (event) => {
+    event.preventDefault();
+    if (!location.hash) {
+      return;
+    }
+    const targetId = decodeURI(location.hash.substring(1));
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      console.log("popstate", event);
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }
 
   // sidebar
   const updateSidebar = () => {
@@ -220,14 +256,8 @@
     document.body.style.backgroundImage = `url('./assets/images/backgrounds/${backgroundId}.jpg')`;
   };
 
-  // publishing functions to global object (window)
-  g.renderPatchList = renderPatchList;
-  g.toggleTheme = toggleTheme;
-  g.insertYoutubeVideo = insertYoutubeVideo;
-  g.setBackground = setBackground;
-
-  // event handling
-  document.addEventListener("DOMContentLoaded", () => {
+  // onload
+  const handlePageLoad = () => {
     // update year value
     document.querySelectorAll("span.year")?.forEach((yearElement) => {
       yearElement.textContent = new Date().getFullYear();
@@ -246,20 +276,19 @@
 
     loadTheme();
     updateSidebar();
-  });
-  document.addEventListener("theme-change", ({ detail: theme }) => {
-    const icons = document.querySelectorAll(".theme-icon");
-    if (document.body) {
-      document.body.dataset.theme = theme;
-    }
-    icons.forEach((iconElement) => {
-      if (theme === "light") {
-        iconElement.classList.remove("fa-sun");
-        iconElement.classList.add("fa-moon");
-      } else {
-        iconElement.classList.remove("fa-moon");
-        iconElement.classList.add("fa-sun");
-      }
-    });
-  });
+  }
+
+  // event handling
+  addEventListener("popstate", handlePopstateWithSmoothScrolling);
+  document.addEventListener("DOMContentLoaded", handlePageLoad);
+  document.addEventListener("theme-change", handleThemeChange);
+
+  // setup global page settings
+  history.scrollRestoration = "manual";
+
+  // publishing functions to global object (window)
+  window.renderPatchList = renderPatchList;
+  window.toggleTheme = toggleTheme;
+  window.insertYoutubeVideo = insertYoutubeVideo;
+  window.setBackground = setBackground;
 })(window);
