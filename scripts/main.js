@@ -142,7 +142,7 @@
         behavior: "smooth",
       });
     }
-  }
+  };
 
   // sidebar
   const updateSidebar = () => {
@@ -273,10 +273,15 @@
       window.addEventListener("resize", handleResize);
       setTimeout(handleResize, 50);
     }
+    // set default hash for better scrolling (only for balance pages)
+    if (location.pathname.includes("/balances/") && !location.hash) {
+      location.href = "#top";
+      history.replaceState(null, "", location.href);
+    }
 
     loadTheme();
     updateSidebar();
-  }
+  };
 
   // event handling
   addEventListener("popstate", handlePopstateWithSmoothScrolling);
