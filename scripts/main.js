@@ -155,10 +155,10 @@
     if (!navigationPanel) {
       return;
     }
-    navigationPanel.classList.add("IconSidebarSubgrid");
+    navigationPanel.classList.add("icon-sidebar-subgrid");
 
     const fragment = document.createDocumentFragment();
-    const sections = document.querySelectorAll("div.Content section");
+    const sections = document.querySelectorAll("div.content section");
     if (sections) {
       const navSections = [...sections].splice(1);
       fragment.append(
@@ -172,7 +172,7 @@
               titleElement.className = "text-center";
               elements.push(titleElement);
             }
-            const cards = section.querySelectorAll("article.Card");
+            const cards = section.querySelectorAll("article.card");
             elements.push(
               ...[...cards]
                 .map((card) => {

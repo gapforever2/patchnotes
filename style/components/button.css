@@ -1,8 +1,8 @@
 button {
   border-radius: 5px;
   padding: 12px 16px;
-  background: var(--ButtonBackground);
-  color: var(--ButtonText);
+  background: var(--button-background);
+  color: var(--button-color);
   border: none;
   font-size: 16px;
   cursor: pointer;

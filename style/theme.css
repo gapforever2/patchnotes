@@ -3,39 +3,27 @@
   color-scheme: dark;
 
   /* Background Colors */
-  --Background: #222831;
-  --FooterBackground: #45484f;
-  --IndexGridBackground: rgba(57, 62, 70, 0.85);
-  --IconGridBackground: #45484f;
+  --body-background: #222831;
+  --footer-background: #45484f;
+  --index-grid-background: #333d;
+  --icon-grid-background: #45484f;
+  --card-background: #393e46;
+  --group-background: #45484f;
 
   /* Text Colors */
-  --Text: #f5f5f5;
-  --Top: #000;
-
-  /* Card & group Colors */
-  --Card: #393e46;
-  --group: #45484f;
-
-  /* Tags */
-  --buff: rgba(86, 167, 39, 0.7);
-  --nerf: rgba(172, 31, 31, 0.7);
-  --stats: rgba(0, 0, 0, 0.6);
-  --removed: rgba(190, 92, 0, 0.6);
-  --added: rgba(31, 52, 172, 0.7);
+  --text-color: #f5f5f5;
 
   /* Link Colors */
-  --Link-Card: #000;
-  --Link-Unvisited: #cbdeff;
-  --Link-Hover: #89a3ff;
-  --Link-Visited: #c7a2ff;
+  --link-card-color: #000;
+  --link-color: #cbdeff;
+  --link-hover-color: #89a3ff;
+  --link-visited-color: #c7a2ff;
 
   /* Other */
-  --Strike: #aaa;
-  --Line: #444;
-  --LM-HR: #555;
-  --ButtonBackground: #4474c1;
-  --ButtonText: #fff;
-  --IconGlow: rgba(255, 255, 255, 0.7);
+  --strike-color: #aaa;
+  --button-background: #4474c1;
+  --button-color: #fff;
+  --icon-glow-color: #fff3;
 }
 
 /* Light Mode Variables */
@@ -43,39 +31,27 @@
   color-scheme: light;
 
   /* Background Colors */
-  --Background: #f2f2f2;
-  --FooterBackground: #e0e0e0;
-  --IndexGridBackground: rgba(220, 220, 220, 0.85);
-  --IconGridBackground: #e0e0e0;
+  --body-background: #f2f2f2;
+  --footer-background: #e0e0e0;
+  --index-grid-background: #ffffffcf;
+  --icon-grid-background: #e0e0e0;
+  --card-background: #f5f5f5;
+  --group-background: #e0e0e0;
 
   /* Text Colors */
-  --Text: #111;
-  --Top: #000;
-
-  /* Card Colors */
-  --Card: #f5f5f5;
-  --group: #e0e0e0;
-
-  /* Tags */
-  --buff: rgba(76, 142, 34, 0.8);
-  --nerf: rgba(150, 40, 40, 0.75);
-  --stats: rgba(0, 0, 0, 0.4);
-  --removed: rgba(185, 80, 20, 0.7);
-  --added: rgba(50, 90, 200, 0.75);
+  --text-color: #111;
 
   /* Link Colors */
-  --Link-Card: #ffffff;
-  --Link-Unvisited: #0066c3;
-  --Link-Hover: #002650;
-  --Link-Visited: #541680;
+  --link-card-color: #ffffff;
+  --link-color: #0066c3;
+  --link-hover-color: #002650;
+  --link-visited-color: #541680;
 
   /* Other */
-  --Strike: #666;
-  --Line: #bbb;
-  --LM-HR: #aaa;
-  --ButtonBackground: #4474c1;
-  --ButtonText: #fff;
-  --IconGlow: #0003;
+  --strike-color: #666;
+  --button-background: #4474c1;
+  --button-color: #fff;
+  --icon-glow-color: #0003;
 }
 
 /* Faction Images */
@@ -85,6 +61,7 @@
 .SERAPHIM {
   width: 35px;
   height: 35px;
+  vertical-align: middle;
 }
 
 .UEF {

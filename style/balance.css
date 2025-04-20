@@ -16,6 +16,8 @@ header {
 }
 
 footer {
+  background: var(--footer-background);
+  text-align: center;
   min-width: 286px;
   display: flex;
   padding: 15px;
@@ -23,7 +25,8 @@ footer {
   flex-direction: column;
 }
 
-.Grid {
+/* Main Grid Layout */
+.grid {
   padding: 0 20px;
   display: grid;
   grid-template-columns: 4fr 0.75fr;
@@ -33,176 +36,136 @@ footer {
   max-width: 1200px;
 }
 
-.Content {
+.content {
   grid-column: 1;
 }
 
-.Date {
-  text-align: right;
-  padding-right: 10px;
-}
-
-.FlexboxContainer {
+.flexbox-container {
   padding-left: 10px;
 }
 
 /* Sidebar */
-.Sidebar {
-  grid-column: 2; /* Positioning within the grid */
-  position: relative; /* Relative positioning */
+.sidebar {
+  grid-column: 2;
+  position: relative;
   padding-bottom: 20px;
 }
 
-/* Sidebar Title */
-.Sidebar a {
-  color: var(--Link-Unvisited);
+.sidebar a {
+  color: var(--link-color);
   font-weight: bold;
 }
 
-.Sidebar a:hover {
-  color: var(--Link-Hover);
+.sidebar a:hover {
+  color: var(--link-hover-color);
 }
 
-/*Icon Sidebar Container */
+/* Icon Sidebar */
 .icon-sidebar-wrapper {
-  position: sticky; /* Sticky positioning */
-  top: 20px; /* Distance from the top */
-  background: var(--IconGridBackground); /* Background color */
-  color: var(--Text); /* Text color */
-  text-align: justify; /* Text alignment */
-  border-radius: 15px; /* Border radius */
+  position: sticky;
+  top: 20px;
+  background: var(--icon-grid-background);
+  color: var(--text-color);
+  text-align: justify;
+  border-radius: 15px;
   max-height: calc(100vh - 40px);
   height: calc(500px);
-
   overflow: hidden;
 }
 
-.IconSidebar {
-  gap: 5px; /* Space between rows */
+.icon-sidebar {
+  gap: 3px;
   overflow-y: scroll;
   width: calc(100% + 17px);
   height: 100%;
 }
 
-.IconSidebar div,
-.IconSidebar h2,
-.IconSidebar h3 {
-  grid-column: 1 / -1;
+.icon-sidebar h2,
+.icon-sidebar h3 {
+  grid-column: 1/-1;
 }
 
-.IconSidebar h3 {
-  margin-top: 20px;
+.icon-sidebar h3 {
+  margin-top: 15px;
 }
 
-.IconSidebar img {
-  object-fit: cover;
+.icon-sidebar a {
+  text-align: center;
 }
 
 .icon-sidebar-inner {
-  padding: 5px 20px 20px; /* Padding */
+  padding: 0 10px 10px;
 }
 
-/* Title in Icon Sidebar */
-.IconSidebarTitle,
-.IconSidebarSubtitle {
-  grid-column: 1 / -1; /* Spanning full width */
-  text-align: center; /* Centred text */
-  margin: 0; /* Remove default margin */
-  padding: 10px 0; /* Padding */
-}
-
-/* Subgrid in Icon Sidebar */
-.IconSidebarSubgrid {
-  display: grid; /* Enable grid layout */
+.icon-sidebar-subgrid {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 7px; /* Space between grid items */
+  gap: 7px;
 }
 
-/* Icon in Subgrid */
-.IconSidebarSubgrid img {
-  width: 50px; /* Icon width */
-  height: 50px; /* Icon height */
+.icon-sidebar-subgrid img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  margin: 0;
   place-self: center;
-  text-decoration: none; /* Remove underline from links */
-  color: #3498db; /* Icon color */
-  transition: box-shadow 0.3s ease; /* Smooth box shadow transition */
+  text-decoration: none;
+  color: #3498db;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-.unit-icon {
-  width: 600px;
-  height: 240px;
+.icon-sidebar-subgrid img:hover {
+  box-shadow:
+    0 0 10px var(--icon-glow-color),
+    0 0 3px var(--icon-glow-color),
+    inset 0 0 3px 3px #aaa;
+  transform: scale(1.1);
+  z-index: 99;
 }
 
-.unit-icon2 {
-  width: 138px;
-  height: 27px;
+/* Sticky Navigation Block */
+.sticky-navigation {
+  position: sticky;
+  top: 0;
+  padding: 10px 10px 0;
+  margin: 0 -10px;
+  background: var(--icon-grid-background);
+  z-index: 100;
 }
 
-.IconSidebarSubgrid a {
-  text-align: center;
-}
-
-.IconSidebarSubgrid img:hover {
-  box-shadow: 0 0 10px var(--IconGlow); /* Icon glow on hover */
-}
-
-/* Icon Grid Container */
-.IconGrid {
-  position: sticky; /* Sticky positioning */
-  top: 20px; /* Distance from the top */
-  background: var(--IconGridBackgroundG); /* Background color */
-  padding: 5px 20px 20px; /* Padding */
-  color: var(--Text); /* Text color */
-  text-align: justify; /* Text alignment */
-  border-radius: 15px; /* Rounded Corners */
-}
-
-/* Icon Grid Title */
-.IconGrid h2 {
-  margin: 10px; /* Margin */
-}
-
-/* Icons in Icon Grid */
-.IconGrid img {
-  width: 45px; /* Icon width */
-  height: 45px; /* Icon height */
-}
-
-.BackToTop {
-  text-align: center;
-  border-radius: 50%;
-}
-
-.Stat {
-  border-radius: 8px;
-  border: lightgray 1px solid;
-  padding: 3px 8px;
-}
-
-.SectionHeader {
-  padding: 10px 0;
+.sticky-navigation::after {
+  content: "";
+  grid-column: 1/-1;
+  background: linear-gradient(to bottom, var(--icon-grid-background) 5%, transparent 95%);
+  position: sticky;
+  display: block;
+  height: 25px;
+  margin: 0 -10px -25px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .Grid {
+  .grid {
     padding: 0 15px;
     grid-template-columns: 1fr;
     gap: 0;
   }
 
-  .Sidebar {
+  .sidebar {
     grid-column: 1;
   }
 
-  .Content {
+  .content {
     grid-column: 1;
   }
 }
 
 @media (max-width: 420px) {
-  .Grid {
+  .grid {
     padding: 0 10px;
   }
 }

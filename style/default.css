@@ -1,7 +1,50 @@
-/* Importing Google Font and Font Awesome */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
-
-/* Import */
 @import url("theme.css");
 @import url("reset.css");
+
+/* Flexbox Utility Classes */
+.flexbox-container {
+  display: flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* Block */
+.block,
+.icon-sidebar-wrapper {
+  box-shadow: 0 1px 3px var(--icon-glow-color);
+}
+
+/* Logo */
+.logo {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* additional styles */
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.clickable {
+  cursor: pointer;
+}

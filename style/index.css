@@ -7,7 +7,7 @@
 
 /* Grid and Layout */
 body {
-  background-color: var(--Background);
+  background-color: var(--body-background);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -20,10 +20,14 @@ body {
 header,
 footer,
 section {
-  background: var(--IndexGridBackground);
+  background: var(--index-grid-background);
   backdrop-filter: blur(5px);
   padding: var(--block-padding);
   border-radius: 20px;
+}
+
+header {
+  padding: calc(var(--block-padding) / 2);
 }
 
 section.block {
@@ -65,13 +69,19 @@ footer a {
   white-space: nowrap;
 }
 
-/* logo */
-.logo {
-  width: 70px;
-  height: 70px;
-}
-
 @media only screen and (max-width: 768px) {
+  header img {
+    display: none;
+  }
+
+  header img.logo {
+    display: inline-block;
+    width: 15px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #000;
+  }
+
   :root {
     --block-margin: 15px;
     --block-padding: 15px;
@@ -84,14 +94,25 @@ footer a {
   main section.block {
     width: 100%;
   }
-
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 @media only screen and (max-width: 420px) {
+  header,
+  header h1 {
+    padding: 0 0 3px;
+    background: none;
+    box-shadow: none !important;
+  }
+
+  header img.logo {
+    display: block;
+    height: 0;
+  }
+
+  header h1 span {
+    white-space: wrap !important;
+  }
+
   :root {
     --block-margin: 10px;
   }

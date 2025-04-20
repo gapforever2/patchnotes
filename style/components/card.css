@@ -3,74 +3,75 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 15px 20px 20px;
+  padding: 20px;
   border-radius: 20px;
 }
 
-.Card {
-  background: var(--Card);
+.card {
+  background: var(--card-background);
   border: 1px solid transparent;
 }
 
 .group {
-  background: var(--group);
+  background: var(--group-background);
 }
 
 /* Card Hover for Interaction */
-.Card:hover {
-  border-color: var(--Link-Unvisited);
+.card:hover {
+  border-color: var(--link-color);
 }
 
 /* Any Image Styling */
-.Card img {
+.card img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5em;
-  object-fit: cover; /* Ensure consistent image aspect ratio */
+  object-fit: cover;
+  vertical-align: middle;
 }
 
 /* Unit Icon Styling */
-.Card h3 img {
+.card h3 img {
   margin-bottom: 3px;
   width: auto;
   height: 64px;
 }
 
 /* Preview Styling */
-.Card img.preview,
-.Card iframe.preview {
+.card img.preview,
+.card iframe.preview {
   max-width: 100%;
   margin-top: 5px;
   display: block;
   border-radius: 10px;
   overflow-y: hidden;
 }
-.Card img.preview {
+.card img.preview {
   width: auto;
 }
-.Card iframe.preview {
+.card iframe.preview {
   width: 854px;
 }
 
 /* lists */
-.Card ul {
+.card ul {
   padding: 0;
 }
-.Card ul ul {
+.card ul ul {
   padding: 0;
   padding-left: 1.5rem;
 }
-.Card ul ul li {
+.card ul ul li {
   list-style: square;
 }
 
 /* Optional Clickable Card */
-.Card.Clickable {
+.card.Clickable {
   cursor: pointer;
 }
 
 .group {
-  background: var(--group);
+  background: var(--group-background);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -80,17 +81,17 @@
 }
 
 /* Button inside the Card */
-.Card a.button-link {
+.card a.button-link {
   display: inline-block;
   padding: 10px 15px;
-  background: var(--ButtonBackground);
-  color: var(--ButtonText);
+  background: var(--button-background);
+  color: var(--button-color);
   border-radius: 5px;
   text-decoration: none;
   margin-top: auto;
   transition: background-color 0.3s ease;
 }
-.Card a.button-link:hover {
+.card a.button-link:hover {
   background: var(--ButtonHoverBackground);
 }
 

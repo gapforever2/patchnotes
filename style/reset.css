@@ -1,6 +1,6 @@
 /* Reset CSS */
 * {
-  font-family: "Ubuntu", sans-serif;
+  font-family: Helvetica, system-ui, sans-serif;
 }
 
 *,
@@ -10,24 +10,24 @@
 }
 
 body {
-  background: var(--Background);
+  background: var(--body-background);
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--Text);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: var(--Link-Unvisited);
+  color: var(--link-color);
   text-decoration: underline;
   font-weight: bold;
 }
 a:visited {
-  color: var(--Link-Visited);
+  color: var(--link-visited-color);
 }
 a:hover {
-  color: var(--Link-Hover);
+  color: var(--link-hover-color);
 }
 a:active {
   color: var(--Link-Active);
@@ -57,44 +57,5 @@ h3 {
 }
 
 s {
-  color: var(--Strike);
-}
-
-img {
-  vertical-align: middle;
-  width: 60px;
-  height: 60px;
-}
-
-footer {
-  text-align: center;
-  font-size: 1rem;
-  background: var(--FooterBackground);
-  padding: 10px 0 5px;
-}
-
-/* Flexbox Utility Classes */
-.FlexboxContainer {
-  display: flex;
-}
-
-.FlexGrow-1 {
-  flex-grow: 1;
-}
-
-.FlexGrow-4 {
-  flex-grow: 4;
-}
-
-/* additional styles */
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.clickable {
-  cursor: pointer;
+  color: var(--strike-color);
 }
