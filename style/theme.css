@@ -1,5 +1,7 @@
 /* Dark Mode Variables */
 :root {
+  color-scheme: dark;
+
   /* Background Colors */
   --Background: #222831;
   --FooterBackground: #45484f;
@@ -38,6 +40,8 @@
 
 /* Light Mode Variables */
 :root.light-mode {
+  color-scheme: light;
+
   /* Background Colors */
   --Background: #f2f2f2;
   --FooterBackground: #e0e0e0;

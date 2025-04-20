@@ -2,22 +2,19 @@
 
 :root {
   --block-margin: 20px;
-  --block-padding: 15px 20px;
-}
-
-body {
-  background-color: var(--Background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: var(--block-padding);
-  height: 100vh;
+  --block-padding: 20px;
 }
 
 /* Grid and Layout */
 body {
+  background-color: var(--Background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
 }
 
 header,
@@ -26,7 +23,7 @@ section {
   background: var(--IndexGridBackground);
   backdrop-filter: blur(5px);
   padding: var(--block-padding);
-  border-radius: var(--block-margin);
+  border-radius: 20px;
 }
 
 section.block {
@@ -40,6 +37,7 @@ section.balance-patches-wrapper {
 div.container {
   width: 100%;
   max-width: 1200px;
+  padding: var(--block-padding);
   flex-direction: column;
 }
 
@@ -75,8 +73,8 @@ footer a {
 
 @media only screen and (max-width: 768px) {
   :root {
-    --block-margin: 10px;
-    --block-padding: 10px 15px;
+    --block-margin: 15px;
+    --block-padding: 15px;
   }
 
   main {
@@ -95,7 +93,7 @@ footer a {
 
 @media only screen and (max-width: 420px) {
   :root {
-    --block-margin: 5px;
+    --block-margin: 10px;
   }
 
   body {
