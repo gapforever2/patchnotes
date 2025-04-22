@@ -145,9 +145,26 @@
   };
 
   // sidebar
+  const getScrollBarWidth = () => {
+    const outer = document.createElement("div");
+    outer.style.visibility = "hidden";
+    outer.style.overflow = "scroll";
+    outer.style.width = "100px";
+    outer.style.height = "100px";
+    document.body.appendChild(outer);
+    const inner = document.createElement("div");
+    inner.style.width = "100%";
+    inner.style.height = "100%";
+    outer.appendChild(inner);
+    const scrollBarWidth = outer.offsetWidth - inner.offsetWidth;
+    outer.parentNode.removeChild(outer);
+    return scrollBarWidth;
+  };
+
   const updateSidebar = () => {
     renderNavigation();
     adjustSidebarHeight();
+    adjustSidebarWidth(getScrollBarWidth());
   };
 
   const renderNavigation = () => {
@@ -208,11 +225,18 @@
   };
 
   const adjustSidebarHeight = () => {
-    const sidebarPanel = document.querySelector(".icon-sidebar-inner");
-    const sidebarPanelHeight = sidebarPanel?.clientHeight;
+    const sidebarPanelInner = document.querySelector(".icon-sidebar-inner");
+    const sidebarPanelInnerHeight = sidebarPanelInner?.clientHeight;
     const sidebarPanelWrapper = document.querySelector(".icon-sidebar-wrapper");
     if (sidebarPanelWrapper) {
-      sidebarPanelWrapper.style.height = `${sidebarPanelHeight}px`;
+      sidebarPanelWrapper.style.height = `${sidebarPanelInnerHeight}px`;
+    }
+  };
+
+  const adjustSidebarWidth = (scrollWidth = 17) => {
+    const sidebarPanel = document.querySelector(".icon-sidebar");
+    if (sidebarPanel) {
+      sidebarPanel.style.width = `calc(100% + ${scrollWidth}px)`;
     }
   };
 
@@ -280,7 +304,9 @@
     }
 
     loadTheme();
-    updateSidebar();
+    if (document.querySelector(".icon-sidebar")) {
+      updateSidebar();
+    }
   };
 
   // event handling

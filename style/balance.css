@@ -76,7 +76,6 @@ footer {
 .icon-sidebar {
   gap: 3px;
   overflow-y: scroll;
-  width: calc(100% + 17px);
   height: 100%;
 }
 
