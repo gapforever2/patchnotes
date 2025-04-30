@@ -259,18 +259,24 @@
       element.height = element.getBoundingClientRect().width * ratio;
     });
 
-  const insertYoutubeVideo = (id, { autoplay = true, mute = true, loop = true } = {}) => {
-    document.write(`
-      <iframe
-        src="https://www.youtube.com/embed/${id}?autoplay=${+autoplay}&mute=${+mute}&loop=${+loop}${loop ? `&playlist=${id}` : ""}"
-        class="preview"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    `);
+  const insertYoutubeVideo = (id, { autoplay = true, mute = true, loop = true, split = false } = {}) => {
+    const container = document.createElement("div");
+    const iframeElement = document.createElement("iframe");
+    iframeElement.src = `https://www.youtube.com/embed/${id}?autoplay=${+autoplay}&mute=${+mute}${loop ? `&loop=${+loop}&playlist=${id}` : ""}`;
+    iframeElement.className = "preview";
+    iframeElement.frameBorder = 0;
+    iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframeElement.referrerPolicy = "strict-origin-when-cross-origin";
+    iframeElement.allowFullscreen = true;
+    container.append(split ? createSplitWrapper(iframeElement) : iframeElement);
+    document.write(container.innerHTML);
+  };
+
+  const createSplitWrapper = (iframeElement) => {
+    const splitWrapperElement = document.createElement("div");
+    splitWrapperElement.className = "preview-split-wrapper";
+    splitWrapperElement.append(iframeElement);
+    return splitWrapperElement;
   };
 
   // random background
