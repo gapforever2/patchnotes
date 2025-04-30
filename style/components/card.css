@@ -46,21 +46,58 @@
   border-radius: 10px;
   overflow-y: hidden;
 }
+
 .card img.preview {
   width: auto;
 }
+
 .card iframe.preview {
-  width: 854px;
+  width: 803px;
+}
+
+/* Split Preview Styling */
+.card .preview-split-wrapper {
+  position: relative;
+  display: block;
+}
+
+.preview-split-wrapper .preview {
+  z-index: 1;
+}
+
+.card .preview-split-wrapper::before {
+  content: "до";
+}
+
+.card .preview-split-wrapper::after {
+  left: 50%;
+  content: "после";
+}
+
+.card .preview-split-wrapper::before,
+.card .preview-split-wrapper::after {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  top: 10%;
+  width: 50%;
+  text-align: center;
+  font-size: 3em;
+  text-shadow:
+    0 0 3px #000,
+    0 0 7px #000d;
 }
 
 /* lists */
 .card ul {
   padding: 0;
 }
+
 .card ul ul {
   padding: 0;
   padding-left: 1.5rem;
 }
+
 .card ul ul li {
   list-style: square;
 }
@@ -91,12 +128,28 @@
   margin-top: auto;
   transition: background-color 0.3s ease;
 }
+
 .card a.button-link:hover {
   background: var(--ButtonHoverBackground);
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .card .preview-split-wrapper::before,
+  .card .preview-split-wrapper::after {
+    font-size: 2em;
+  }
+}
+
 @media (max-width: 768px) {
+  .card .preview-split-wrapper::before,
+  .card .preview-split-wrapper::after {
+    font-size: 2.3em;
+    text-shadow:
+      0 0 2px #000,
+      0 0 5px #000d;
+  }
+
   .block {
     padding: 15px;
     gap: 15px;
@@ -104,6 +157,11 @@
 }
 
 @media (max-width: 420px) {
+  .card .preview-split-wrapper::before,
+  .card .preview-split-wrapper::after {
+    font-size: 1.5em;
+  }
+
   .block {
     padding: 10px;
     gap: 10px;
