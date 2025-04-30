@@ -259,10 +259,10 @@
       element.height = element.getBoundingClientRect().width * ratio;
     });
 
-  const insertYoutubeVideo = (id, { autoplay = true, mute = true } = {}) => {
+  const insertYoutubeVideo = (id, { autoplay = true, mute = true, loop = true } = {}) => {
     document.write(`
       <iframe
-        src="https://www.youtube.com/embed/${id}?autoplay=${+autoplay}&mute=${+mute}"
+        src="https://www.youtube.com/embed/${id}?autoplay=${+autoplay}&mute=${+mute}&loop=${+loop}${loop ? `&playlist=${id}` : ""}"
         class="preview"
         title="YouTube video player"
         frameborder="0"
