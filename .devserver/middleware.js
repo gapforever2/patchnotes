@@ -10,7 +10,7 @@ module.exports = async function (req, res, next) {
     await delay(500 + Math.random() * 500);
   }
 
-  // Обработка ошибки 404 и неплоного пути (как на Github Pages)
+  // Обработка ошибки 404 и неполного пути (как на Github Pages)
   const cleanUrl = req.originalUrl.split("?")[0];
   const filePath = path.resolve(__dirname, `..${cleanUrl}`);
   if (!fs.existsSync(filePath)) {

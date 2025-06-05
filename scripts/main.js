@@ -265,7 +265,8 @@
     iframeElement.src = `https://www.youtube.com/embed/${id}?autoplay=${+autoplay}&mute=${+mute}${loop ? `&loop=${+loop}&playlist=${id}` : ""}`;
     iframeElement.className = "preview";
     iframeElement.frameBorder = 0;
-    iframeElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframeElement.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframeElement.referrerPolicy = "strict-origin-when-cross-origin";
     iframeElement.allowFullscreen = true;
     container.append(split ? createSplitWrapper(iframeElement) : iframeElement);

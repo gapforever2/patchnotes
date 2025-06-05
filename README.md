@@ -12,6 +12,15 @@ A simple static project hosted on **GitHub Pages**, powered by [live-server](htt
 
 - [Node.js](https://nodejs.org/en/) (v18 or later recommended)
 - npm (comes bundled with Node.js)
+- [VSCode](https://code.visualstudio.com/) (highly recommended)
+- VSCode extensions:
+  - [Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - [Spell Checker Russian](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-russian)
+
+## Other recommended extensions
+
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) – for code formatting using shortcuts (**Alt + Shift + F** or **Ctrl + Shift + P**, then **Format Document**) and automatic formatting on save.
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) – for running a local development server with live reloading using the **Go Live** button in the status bar or by right-clicking on the HTML file and selecting **Open with Live Server**.
 
 ## Installation
 

@@ -10,6 +10,15 @@
   "prettier": {
     "endOfLine": "lf",
     "tabWidth": 2,
-    "printWidth": 200
+    "printWidth": 120,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "html",
+          "printWidth": 200
+        }
+      }
+    ]
   }
 }

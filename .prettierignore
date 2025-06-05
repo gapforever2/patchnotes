@@ -12,5 +12,8 @@ LICENSE
 *.svg
 *.webp
 
+# text files
+*.dic
+
 # dependencies & cashes
 node_modules/

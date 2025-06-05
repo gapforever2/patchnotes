@@ -1,6 +1,5 @@
 *.db
 images/Thumbs.db
-*.vscode
 /node_modules
 /.pnp
 .pnp.js

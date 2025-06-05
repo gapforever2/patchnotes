@@ -1,0 +1,36 @@
+{
+  "cSpell.language": "ru,en",
+  "cSpell.dictionaries": ["project-words"],
+  "cSpell.dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./dictionaries/project.dic",
+      "addWords": true
+    }
+  ],
+  "prettier.enable": true,
+  "prettier.configPath": "package.json",
+  "liveServer.settings.port": 7701,
+  "liveServer.settings.file": "404.html",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.rulers": [120],
+  "editor.tabSize": 2,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.rulers": [200]
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
