@@ -53,6 +53,7 @@
 
 .card iframe.preview {
   width: 803px;
+  border: 0;
 }
 
 /* Split Preview Styling */

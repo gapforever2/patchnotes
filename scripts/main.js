@@ -264,7 +264,6 @@
     const iframeElement = document.createElement("iframe");
     iframeElement.src = `https://www.youtube.com/embed/${id}?autoplay=${+autoplay}&mute=${+mute}${loop ? `&loop=${+loop}&playlist=${id}` : ""}`;
     iframeElement.className = "preview";
-    iframeElement.frameBorder = 0;
     iframeElement.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframeElement.referrerPolicy = "strict-origin-when-cross-origin";
