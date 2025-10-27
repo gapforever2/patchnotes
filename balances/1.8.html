@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>GAP Forever | Баланс патч 1.8 «Перезагрузка»</title>
+    <meta name="twitter:title" content="GAP Forever | Баланс патч 1.8 «Перезагрузка»" />
+    <meta property="og:title" content="GAP Forever | Баланс патч 1.8 «Перезагрузка»" />
+    <meta property="og:image:alt" content="GAP Forever | Баланс патч 1.8 «Перезагрузка»" />
+    <!-- META Tags for Social Sharing -->
+    <meta property="og:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gapforever2.github.io/patchnotes/" />
+    <meta property="og:image" content="../assets/images/thumbnail/thumbnail.png" />
+    <meta name="twitter:name" content="GAP Forever" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta name="twitter:image" content="../assets/images/thumbnail/thumbnail.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/balance.css" />
+    <!-- JS -->
+    <script src="../scripts/main.js"></script>
+    <style>
+      .tag {
+        display: inline-block;
+        margin-left: 12px;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.75em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .tag.buff { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+      .tag.nerf { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+      .tag.fix { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+      .tag.rebalance { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+      .flex-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .flex-title h3 {
+        margin: 0;
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="grid">
+      <div id="top" class="content">
+        <header class="flexbox-container">
+          <h1 class="flex-grow-1"><img class="logo" src="../assets/images/faction/gaf-logo.svg" loading="lazy" alt="GAF" /> Balance</h1>
+          <div class="text-right">Дата обновления: 30.08.2025 г.</div>
+        </header>
+
+        <section class="block group">
+          <h2>О патче</h2>
+
+          <article class="block card">
+            <h3>Перезагрузка</h3>
+            <p>Всем привет! Патч 1.8 представляет собой откат до исходных патчей с минимальными изменениями, Начинаем с бафа снайперов заканчивая изменением командных ботов.</p>
+            <p>
+              <b>Дисклеймер</b>: Внесенные изменения могут иметь непредвиденные эффекты. Если столкнётесь с одним из таких — репортите в канал баланса или <a href="https://discord.com/invite/3wvXGZHHFp" target="_blank">на Discord GAF</a>.
+            </p>
+            <p class="text-right">
+              <i><b>Баланс-команда: llN, Angel, Aiverse</b></i>
+            </p>
+          </article>
+
+          <article class="block card">
+            <div class="flex-title">
+              <h3>Баланс патч 1.8 «Перезагрузка»</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Откат к базовому балансу с точечными правками: баф снайперов ,ребаланс T2 танков, изменения ACU, зданий, морских и воздушных юнитов. Всё ниже по списку!</p>
+          </article>
+        </section>
+
+        <!-- БМК (ACU) -->
+        <section class="block group">
+          <h2>БМК (ACU)</h2>
+
+          <article id="UEFACU" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/ACU.png" loading="lazy" /> БМК ОФЗ (GAF-версия)</h3>
+              <span class="tag buff">Бафф</span>
+            </div>
+            <p>Изменены апгрейды: добавлен новый ган и щит с постоянной регенерацией.</p>
+            <ul>
+              <li>
+                Новый апгрейд гана
+                <ul>
+                  <li><img src="../assets/images/balances/7/gun.png" class="preview" loading="lazy" /></li>
+                </ul>
+              </li>
+              <li>
+                Новый апгрейд щита (постоянная регенерация, как нано-репеир)
+                <span class="tag fix">Фикс</span>
+                <ul>
+                  <li><img src="../assets/images/balances/7/regen.png" class="preview" loading="lazy" /></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="CybranACU" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/ACU.png" loading="lazy" /> БМК Кибран</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Изменены апгрейды: улучшение экономического апгрейда перенесено на левую руку.</p>
+          </article>
+
+          <article id="AEONACU" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/Acu.png" loading="lazy" /> БМК Эон</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Изменены апгрейды: хроно-демпфер, щит перенесён на левую руку, исправлен баг с щитом.</p>
+          </article>
+
+          <article id="SACU" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/SCU.png" loading="lazy" /> Саку</h3>
+              <span class="tag buff">Бафф</span>
+            </div>
+            <p>Усилены и добавлены тяжёлый рембо и диверсионный рембо пресеты.</p>
+            <ul>
+              <li>ОФЗ: <b>Терминатор</b> (тяж), <b>Патриот</b> (диверс)</li>
+              <li>Кибран: <b>Каракал</b> (тяж), <b>Скиталец</b> (диверс)</li>
+              <li>Эон: <b>Инквизитор</b> (тяж), <b>Странник</b> (диверс)</li>
+              <li>Серафим: <b>Ита-Хас</b> (тяж), <b>Тал-Восса</b> (диверс)</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Наземные юниты -->
+        <section class="block group">
+          <h2>Наземные юниты</h2>
+
+          <article id="AeonSniper" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T3Sniper.png" loading="lazy" /> Снайпер Эон</h3>
+              <span class="tag buff">Бафф</span>
+            </div>
+            <p>Бафф снайпера.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Энергия: <s>13500</s> <i class="fa-solid fa-arrow-right"></i> 17500<span class="tag nerf">нерф</span></li>
+                  <li>Масса: <s>700</s> <i class="fa-solid fa-arrow-right"></i> 1000<span class="tag nerf">Нёрф</span></li>
+                  <li>Время постройки: <s>4000</s> <i class="fa-solid fa-arrow-right"></i> 4500<span class="tag nerf">Нёрф</span></li>
+                  <li>Урон: <s>950</s> <i class="fa-solid fa-arrow-right"></i> 1000<span class="tag buff">бафф</span></li>
+                  <li>Ускорена анимация стрельбы<span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="SeraSniper" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/T3Sniper.png" loading="lazy" /> Снайпер Серафим</h3>
+              <span class="tag buff">Бафф</span>
+            </div>
+            <p>Бафф снайпера.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Энергия: <s>14000</s> <i class="fa-solid fa-arrow-right"></i> 18500<span class="tag nerf">Нёрф</span></li>
+                  <li>Масса: <s>780</s> <i class="fa-solid fa-arrow-right"></i> 1150<span class="tag nerf">Нёрф</span></li>
+                  <li>Время постройки: <s>4300</s> <i class="fa-solid fa-arrow-right"></i> 4800<span class="tag nerf">Нёрф</span></li>
+                  <li>Урон (обычный): <s>580</s> <i class="fa-solid fa-arrow-right"></i> 700<span class="tag buff">бафф</span></li>
+                  <li>Урон (снайперский): <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 780 ×3<span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Obsidian" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T2Tank.png" loading="lazy" /> Обсидиан (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Ребаланс T2 танка.</p>
+            <ul>
+              <li>
+                Изменения
+                <ul>
+                  <li>Здоровье: <s>1250</s> <i class="fa-solid fa-arrow-right"></i> 700 <span class="tag nerf">Нёрф</span></li>
+                  <li>Прочность щита: <s>1500</s> <i class="fa-solid fa-arrow-right"></i> 1750 <span class="tag buff">Бафф</span></li>
+                  <li>Потребление щита: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 4 <span class="tag buff">Бафф</span></li>
+                  <li>Скорость: <s>2.6</s> <i class="fa-solid fa-arrow-right"></i> 2.7 <span class="tag buff">Бафф</span></li>
+                  <li>Урон: <s>360</s> <i class="fa-solid fa-arrow-right"></i> 320 <span class="tag nerf">Нёрф</span></li>
+                  <li>Дальность: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 24 <span class="tag buff">Бафф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="ShieldDisintegrator" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T3SheildDistruptor.png" loading="lazy" /> Дезинтегратор щитов (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>GAF-версия юнита.</p>
+          </article>
+
+          <article id="Ostrie" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T3MobileML.png" loading="lazy" /> Острие (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>GAF-версия юнита.</p>
+          </article>
+
+          <article id="Selen" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/T1Scout.png" loading="lazy" /> Селен (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>GAF-версия юнита.</p>
+          </article>
+        </section>
+
+        <!-- Здания -->
+        <section class="block group">
+          <h2>Здания</h2>
+
+          <article id="HQModels" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/structure/T1LandFactory.png" loading="lazy" /> HQ модели</h3>
+              <span class="tag fix">Фикс</span>
+            </div>
+            <p>Изменены модели HQ для Эон и Кибран.</p>
+          </article>
+
+          <article id="TorpedoLaunchers" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/structure/12.webp" loading="lazy" /> Торпедные установки</h3>
+              <span class="tag buff">Бафф</span>
+            </div>
+            <ul>
+              <li>
+                ОФЗ
+                <ul>
+                  <li>Скорость строительства: <s>1446</s> <i class="fa-solid fa-arrow-right"></i> 1400 <span class="tag buff">Бафф</span></li>
+                  <li>Прочность: <s>6400</s> <i class="fa-solid fa-arrow-right"></i> 12800 <span class="tag buff">Бафф</span></li>
+                </ul>
+              </li>
+              <li>
+                <h3><img src="../assets/images/units/cybran/structure/T2TorpedoDef.png" loading="lazy" /> Кибран</h3>
+                <ul>
+                  <li>Скорость строительства: <s>1446</s> <i class="fa-solid fa-arrow-right"></i> 1400 <span class="tag buff">Бафф</span></li>
+                  <li>Прочность: <s>5800</s> <i class="fa-solid fa-arrow-right"></i> 11600 <span class="tag buff">Бафф</span></li>
+                </ul>
+              </li>
+              <li>
+                <h3><img src="../assets/images/units/aeon/structure/T2TorpDefence.png" loading="lazy" /> Эон</h3>
+                <ul>
+                  <li>Скорость строительства: <s>1446</s> <i class="fa-solid fa-arrow-right"></i> 1400 <span class="tag buff">Бафф</span></li>
+                  <li>Прочность: <s>6100</s> <i class="fa-solid fa-arrow-right"></i> 12200 <span class="tag buff">Бафф</span></li>
+                </ul>
+              </li>
+              <li>
+                <h3><img src="../assets/images/units/sera/structure/T2TorpedoDef.png" loading="lazy" /> Серафим</h3>
+                <ul>
+                  <li>Скорость строительства: <s>1446</s> <i class="fa-solid fa-arrow-right"></i> 1400 <span class="tag buff">Бафф</span></li>
+                  <li>Прочность: <s>4800</s> <i class="fa-solid fa-arrow-right"></i> 9600 <span class="tag buff">Бафф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="ShieldGenerators" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/structure/T3ShieldGen.png" loading="lazy" /> Щит генераторы</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Ребаланс щит генераторов.</p>
+
+            <h3>Щит-генераторы</h3>
+            <ul>
+              <li>ОФЗ T3: <s>1700</s> <i class="fa-solid fa-arrow-right"></i> 19000 <span class="tag buff">Бафф</span></li>
+              <li>
+                <h3><img src="../assets/images/units/cybran/structure/T2SheildL4.png" loading="lazy" /> Ребаланс стоимости ED структур</h3>
+                Кибран T2, T3
+                <ul>
+                  <li>ED2 масса: <s>460</s> <i class="fa-solid fa-arrow-right"></i> 400 <span class="tag buff">Бафф</span></li>
+                  <li>ED3 масса: <s>1260</s> <i class="fa-solid fa-arrow-right"></i> 1000 <span class="tag buff">Бафф</span></li>
+                  <li>ED4 масса: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 1800 | щит: <s>13000</s> <i class="fa-solid fa-arrow-right"></i> 15000 <span class="tag buff">Бафф</span></li>
+                  <li>ED5 масса: <s>4260</s> <i class="fa-solid fa-arrow-right"></i> 3000 <span class="tag buff">Бафф</span></li>
+                </ul>
+              </li>
+              <li>Эон T3 размер щита: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 36 <span class="tag buff">Бафф</span></li>
+            </ul>
+          </article>
+
+          <article id="Kennels" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/structure/T2EngieStationL2.png" loading="lazy" /> Инженерные станции</h3>
+              <span class="tag buff">Бафф</span>
+            </div>
+
+            <h3>Псарня</h3>
+            <ul>
+              <li>Масса дрона: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 50 <span class="tag buff">Бафф</span></li>
+              <li>Энергия дрона: <s>1000</s> <i class="fa-solid fa-arrow-right"></i> 500 <span class="tag buff">Бафф</span></li>
+            </ul>
+
+            <h3><img src="../assets/images/units/cybran/structure/T2EngieStationL3.png" loading="lazy" /> Улей</h3>
+            <ul>
+              <li>Скорость сборки: <s>42</s> <i class="fa-solid fa-arrow-right"></i> 55 <span class="tag buff">Бафф</span></li>
+              <li>Скорость постройки: <s>1171</s> <i class="fa-solid fa-arrow-right"></i> 1000 <span class="tag buff">Бафф</span></li>
+            </ul>
+
+            <h3><img src="../assets/images/units/uef/structure/T3Gate.png" loading="lazy" /> Врата (GAF-версия)</h3>
+            <p>GAF-версия.</p>
+          </article>
+        </section>
+
+        <!-- Морские юниты -->
+        <section class="block group">
+          <h2>Морские юниты</h2>
+
+          <article id="Atlantis" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/naval/T4AircraftCarrier.png" loading="lazy" /> Атлантис (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>GAF-версия.</p>
+          </article>
+          
+          <article id="Destroyercub" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/naval/T2Destoryer.png" loading="lazy" />Кибран морские юниты</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Откат до старой версии.</p>
+          </article>
+
+          <article id="Destroyeraeon" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/naval/T2Destroyer.png" loading="lazy" />Эон морские юниты (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Откат до старой версии.</p>
+          </article>
+
+          <article id="Destroyersera" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/naval/T2Destroyer.png" loading="lazy" />Серафим морские юниты</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>Откат до старой версии.</p>
+          </article>
+
+           <article id="Missile Ship" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/naval/T3MissleShip.png" loading="lazy" />Missile Ship</h3>
+              <span class="tag fix">Фикс</span>
+            </div>
+            <p>Баг-фикс.</p>
+          </article>
+        </section>
+
+        <!-- Воздушные юниты -->
+        <section class="block group">
+          <h2>Воздушные юниты</h2>
+
+          <article id="ASFUEF" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/air/T3ASF.png" loading="lazy" /> АСФ</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p>GAF-версия.</p>
+          </article>
+
+          <article id="ASFCUB" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/air/T3ASF.png" loading="lazy" />ASF Кибран</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p> </p>
+          </article>
+
+          <article id="ASFAEON" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/air/T2CombatFighter.png" loading="lazy" />Swift Wind (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p> </p>
+          </article>
+
+          <article id="ASFEXP" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/air/T4Gunship.png" loading="lazy" />Soul Ripper (GAF-версия)</h3>
+              <span class="tag rebalance">Ребаланс</span>
+            </div>
+            <p> </p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Сайдбар -->
+      <div class="sidebar">
+        <div class="icon-sidebar-wrapper">
+          <div class="icon-sidebar">
+            <div class="icon-sidebar-inner">
+              <div class="sticky-navigation icon-sidebar-subgrid">
+                <h2 class="text-center">Навигация</h2>
+                <a tabindex="0" onclick="history?.back()" onkeypress="history?.back()" class="clickable"><i class="fa-solid fa-arrow-left"></i><br />назад</a>
+                <a href="../index.html"><i class="fa-solid fa-list"></i><br />патчи</a>
+                <a tabindex="0" onclick="toggleTheme()" onkeypress="toggleTheme()" class="clickable"><i class="theme-icon fa-solid fa-moon"></i><br />тема</a>
+                <a tabindex="0" onclick="history?.forward()" onkeypress="history?.forward()" class="clickable"><i class="fa-solid fa-arrow-right"></i><br />вперёд</a>
+              </div>
+              <div class="navigation"><!-- autogenerated navigation --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="../index.html">к списку патчей</a> | <a href="#top">наверх</a></p>
+      <p><a href="https://gapforever.com/" target="_blank">GapForever.com</a> © 2015-<span class="year">2025</span></p>
+    </footer>
+  </body>
+</html>

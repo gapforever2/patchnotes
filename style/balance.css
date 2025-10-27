@@ -126,6 +126,24 @@ footer {
   z-index: 99;
 }
 
+/* Tag-colored borders for navigation icons */
+.icon-sidebar-subgrid a.tag-buff img {
+  border: 2px solid #c3e6cb; /* matches .tag.buff border */
+  box-shadow: 0 0 6px #c3e6cb55;
+}
+.icon-sidebar-subgrid a.tag-nerf img {
+  border: 2px solid #f5c6cb; /* matches .tag.nerf border */
+  box-shadow: 0 0 6px #f5c6cb55;
+}
+.icon-sidebar-subgrid a.tag-fix img {
+  border: 2px solid #bee5eb; /* matches .tag.fix border */
+  box-shadow: 0 0 6px #bee5eb55;
+}
+.icon-sidebar-subgrid a.tag-rebalance img {
+  border: 2px solid #ffeaa7; /* matches .tag.rebalance border */
+  box-shadow: 0 0 6px #ffeaa755;
+}
+
 /* Sticky Navigation Block */
 .sticky-navigation {
   position: sticky;

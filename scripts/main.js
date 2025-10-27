@@ -202,6 +202,14 @@
                     const anchor = document.createElement("a");
                     anchor.title = title;
                     anchor.href = `#${id}`;
+                    // Derive tag type from the card header, e.g. buff/nerf/fix/rebalance
+                    const tagElement = card.querySelector(".flex-title .tag");
+                    if (tagElement && tagElement.classList) {
+                      const tagType = [...tagElement.classList].find((cls) => cls !== "tag");
+                      if (tagType && ["buff", "nerf", "fix", "rebalance"].includes(tagType)) {
+                        anchor.classList.add(`tag-${tagType}`);
+                      }
+                    }
                     anchor.append(img);
                     anchor.addEventListener("click", scrollSmooth);
                     return anchor;

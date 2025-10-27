@@ -1,6 +1,11 @@
 {
   "balance": [
     {
+      "patch": "Баланс патч 1.8 «Reboot»",
+      "link": "./balances/1.8.html",
+      "date": "2025-10-30"
+    },
+    {
       "patch": "Баланс патч 7 «Aeonigma»",
       "link": "./balances/7.html",
       "date": "2025-04-30"
