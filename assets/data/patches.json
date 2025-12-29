@@ -1,5 +1,11 @@
 {
   "balance": [
+
+    {
+      "patch": "Баланс патч 9 «Royal times»",
+      "link": "./balances/9.html",
+      "date": "2025-12-29"
+    },
     {
       "patch": "Баланс патч 1.8 «Reboot»",
       "link": "./balances/1.8.html",
