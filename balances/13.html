@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <title>GAP Forever — Бета-тест 13</title>
-    <meta name="twitter:title" content="GAP Forever — Бета-тест 13" />
-    <meta property="og:title" content="GAP Forever — Бета-тест 13" />
-    <meta property="og:image:alt" content="GAP Forever — Бета-тест 13" />
+    <title>GAP Forever New Look</title>
+    <meta name="twitter:title" content="GAP Forever New Look" />
+    <meta property="og:title" content="GAP Forever New Look" />
+    <meta property="og:image:alt" content="GAP Forever New Look" />
     <!-- META Tags for Social Sharing -->
     <meta property="og:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
     <meta property="og:type" content="website" />
@@ -54,7 +54,7 @@
       <div id="top" class="content">
         <header class="flexbox-container">
           <h1 class="flex-grow-1"><img class="logo" src="../assets/images/faction/gaf-logo.svg" loading="lazy" alt="GAF" /> Баланс</h1>
-          <div class="text-right">Дата обновления: 07.09.2026 г.</div>
+          <div class="text-right">Дата обновления: 12.05.2026 г.</div>
         </header>
 
         <section class="block group">
@@ -76,102 +76,61 @@
             </p>
           </article>
         </section>
-        <!-- Механики, БМК и АКБП -->
-        <section class="block group">
-          <h2>Механики, БМК и АКБП</h2>
-
-          <article id="aura-runtime" class="block card">
-            <div class="flex-title">
-              <h3>Общая механика постоянных аур</h3>
-              <span class="tag fix">механика</span>
-            </div>
-            <p><code>ffb1c7f29 — Add shared aura runtime mechanics</code></p>
-            <ul>
-              <li>Постоянные ауры получили единый механизм учёта входа в поле, выхода из него, гибели источника и одновременного воздействия нескольких источников.</li>
-              <li>Изменения максимального здоровья и прочности щита применяются к уже существующему состоянию юнита. Полученный ранее урон сохраняется: аура не ремонтирует корпус и не создаёт щит заново.</li>
-              <li>Активный щит получает прибавку к текущей и максимальной прочности. Сбитый или перезаряжающийся щит получает только новый максимум, без сброса таймера и бесплатного восстановления.</li>
-              <li>При выходе из поля бонус корректно снимается. Если оставшейся текущей прочности недостаточно, щит штатно разрушается и начинает обычную перезарядку.</li>
-              <li>Для полей Серафимов действует приоритет сильнейшего источника: улучшенная аура БМК, затем аура АКБП, затем базовая аура БМК.</li>
-              <li>Радиусы аур публикуются в native-рендерер напрямую из Lua. Кольца повторяют рельеф, используют фактический текущий радиус и обновляются после установки или снятия сенсорного улучшения.</li>
-              <li>Панель юнита показывает фактический максимум щита с учётом активного усиления.</li>
-            </ul>
-          </article>
-
-          <article id="aeon-commanders" class="block card">
-            <div class="flex-title">
-              <h3><img src="../assets/images/units/aeon/land/Acu.png" loading="lazy" /> Эон: БМК и АКБП</h3>
-              <span class="tag rebalance">переработка</span>
-            </div>
-            <p><code>86c56cea9 — Rework Aeon SACU support fields</code></p>
-            <ul>
-              <li><b>Хроноглушитель БМК:</b> потребление энергии за волну <s>0</s> <i class="fa-solid fa-arrow-right"></i> 200.</li>
-              <li><b>Поле Энтропии АКБП:</b> стоимость 1200 массы и 30000 энергии, время установки 5040, радиус 30 или 45 с улучшенными сенсорами.</li>
-              <li>Каждая волна на 15 секунд уменьшает итоговую регенерацию вражеских наземных юнитов на 80%, замедляет их на 10% и один раз наносит 2500 урона каждому активному щиту. Урон не проходит сквозь щит в корпус.</li>
-              <li>Волна требует 500 энергии. Пока система установлена, урон главного орудия АКБП снижен с 300 до 100.</li>
-              <li><b>Усилитель щитов:</b> стоимость 1750 массы и 75000 энергии, содержание 500 энергии/с, радиус 30 или 45 с сенсорами. Максимальное здоровье носителя уменьшается на 5500.</li>
-              <li>Несколько усилителей не складываются. Бонус зависит от цели: Obsidian +250, Asylum +500, Harbinger +1200, Titan +800, Parashield +750, Fatboy +2500, Athanah +2500; щиты БМК и АКБП получают отдельные значения для каждого типа щита.</li>
-              <li>Щиты Эон БМК: +2000 к лёгкому и +5000 к тяжёлому. Щиты Эон АКБП: +2500 к обычному и +5000 к тяжёлому.</li>
-              <li>Улучшенная система наноремонта после Усилителя щитов даёт 2000 здоровья, итоговую регенерацию 50/с и +15% скорости передвижения.</li>
-              <li>Добавлены пресеты <b>Defiler</b> (Энтропия, лёгкий щит, сенсоры), <b>Aegis</b> (Усилитель щитов, наноремонт, сенсоры) и <b>Heretic</b> (обе ауры, наноремонт, сенсоры).</li>
-              <li>Для обеих аур добавлены отдельные эффекты, маркеры поражённых целей и кнопки включения.</li>
-            </ul>
-          </article>
-
-          <article id="uef-commanders" class="block card">
-            <div class="flex-title">
-              <h3><img src="../assets/images/units/uef/land/ACU.png" loading="lazy" /> ОФЗ: щиты БМК и АКБП</h3>
-              <span class="tag rebalance">переработка</span>
-            </div>
-            <p><code>6ee67161b — Rework UEF commander shield systems</code></p>
-            <ul>
-              <li>Щиты БМК и АКБП теперь меняют параметры на месте при установке улучшения или попадании в поле усилителя: текущий урон и перезарядка сохраняются.</li>
-              <li><b>Лёгкий купольный щит АКБП:</b> 17500 прочности, 50 регенерации/с, радиус 35, содержание 720 энергии/с. Улучшенные сенсоры увеличивают радиус до 50.</li>
-              <li><b>Тяжёлый купольный щит АКБП:</b> 52000 прочности, 150 регенерации/с, радиус 20, содержание 1220 энергии/с. Его радиус сенсорами не увеличивается.</li>
-              <li>Усилитель щитов Эон добавляет ОФЗ БМК +3000 к персональному либо +8000 к купольному щиту.</li>
-              <li>ОФЗ АКБП получает +2000 к персональному, +1000 к лёгкому купольному или +2000 к тяжёлому купольному щиту.</li>
-              <li>Добавлены пресеты <b>Last Bastion</b> с тяжёлым куполом и постановщиком помех и <b>Mountain</b> с лёгким куполом, помехами и улучшенными сенсорами.</li>
-            </ul>
-          </article>
-
-          <article id="cybran-commanders" class="block card">
-            <div class="flex-title">
-              <h3><img src="../assets/images/units/cybran/land/ACU.png" loading="lazy" /> Кибран: БМК и АКБП</h3>
-              <span class="tag rebalance">переработка</span>
-            </div>
-            <p><code>af841b1f9 — Expand Cybran commander combat systems</code></p>
-            <ul>
-              <li><b>Стелс-поле БМК:</b> стоимость 800 массы и 24000 энергии, содержание 170 энергии/с, радиус 24. Поле скрывает от радара и сонара самого БМК и союзные войска рядом.</li>
-              <li><b>Персональная оптическая маскировка БМК</b> скрывает модель визуально и даёт +12000 здоровья, но больше не предоставляет радарный или сонарный стелс. Содержание — 3000 энергии/с.</li>
-              <li><b>Нанитовый торпедный аппарат:</b> 300 урона, дальность 60, три торпеды в залпе, радар и сонар 65, подводная скорость БМК 1,7 <i class="fa-solid fa-arrow-right"></i> 2,2. Торпеды имеют 3 HP и могут быть перехвачены противоторпедной защитой.</li>
-              <li>Специализированный преобразователь АКБП добавляет главному орудию EMI/EMP: оглушение по технологическим уровням, +300 урона по щитам в радиусе 3 и дальность 25 <i class="fa-solid fa-arrow-right"></i> 35.</li>
-              <li><b>Стелс-поле АКБП:</b> стоимость 800 массы и 24000 энергии, содержание 170 энергии/с, радиус 30 или 45 с сенсорами. Скрывает самого носителя и союзников.</li>
-              <li><b>Поле кинетического ускорения:</b> стоимость 1400 массы и 58000 энергии, содержание 520 энергии/с, радиус 30 или 45. Скорость повышается на 35% для Т1 и АКБП, 20% для Т2 и 15% для Т3.</li>
-              <li>Носитель поля ускоряется с 2,0 до 2,7, но теряет 4500 максимального здоровья, а урон его главной пушки снижается с 300 до 100. Несколько полей не складываются.</li>
-              <li>Добавлены пресеты <b>Anti-Air Gunner</b>, <b>Cross-Fighter</b>, <b>Veil</b> и <b>Mirage</b>, а также отдельная кнопка поля ускорения.</li>
-            </ul>
-          </article>
-
-          <article id="seraphim-commanders" class="block card">
-            <div class="flex-title">
-              <h3><img src="../assets/images/units/sera/land/ACU.png" loading="lazy" /> Серафим: БМК и АКБП</h3>
-              <span class="tag rebalance">переработка</span>
-            </div>
-            <p><code>843443a44 — Add Seraphim SACU support fields</code></p>
-            <ul>
-              <li>Содержание базового регенерирующего поля БМК: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 50 энергии/с; улучшенного: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 750 энергии/с.</li>
-              <li><b>Поле восстановления АКБП:</b> стоимость 2500 массы и 30000 энергии, содержание 500 энергии/с, радиус 25 или 35 с сенсорами. Носитель теряет 7000 максимального здоровья.</li>
-              <li>Поле восстанавливает 2,75% базового максимального здоровья в секунду. Минимальный итог — 9/с; предел бонуса: Т1 +15, Т2 +30, Т3 +70, экспериментальные +90, АКБП +20.</li>
-              <li><b>Поле жизнестойкости:</b> стоимость 1000 массы и 25000 энергии, содержание 250 энергии/с, радиус 25 или 35. Оно временно увеличивает максимум здоровья союзных наземных юнитов на 15%, не заполняя добавленный запас.</li>
-              <li>Оба поля действуют на наземные, ховерные и амфибийные юниты всех фракций, включая инженеров и АКБП. БМК, авиация, флот и здания исключены.</li>
-              <li>Сверхлёгкий персональный щит требует Поле восстановления: 5000 прочности, 25 регенерации/с, содержание 170 энергии/с и штраф 5000 максимального здоровья носителя.</li>
-              <li>Добавлены пресеты <b>Seth-toth</b>, <b>Seth-iyah</b> и <b>Seth-uhthe-iyah</b>, отдельные кнопки двух полей и визуальный предупреждающий эффект.</li>
-            </ul>
-          </article>
-        </section>
 
         <!-- Наземные юниты -->
         <section class="block group">
           <h2>Наземные юниты</h2>
+
+          <article id="Sacu uef" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/Acu.png" /> Эон БМК</h3>
+              <span class="tag nerf">нерф</span>
+            </div>
+            <ul>
+              <li>
+                <ul>
+                  <h3><img src="../assets/images/balances/7/aeon/hrono.png" /> Хроноглушитель</h3>
+                  <li>Потребление энергии за волну: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 250 <span class="tag nerf">нерф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Sacu Cybran" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/ACU.png" loading="lazy" /> Кибран БМК</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <ul>
+              <li>
+                <ul>
+                  <h3><img src="../assets/images/balances/7/kibran/stels%20pole.png" /> Новый апгрейд «Стелс-поле»</h3>
+                  <li>Масса: <s></s> <i class="fa-solid fa-arrow-right"></i> 1200 </li>
+                  <li>Энергия: <s></s> <i class="fa-solid fa-arrow-right"></i> 28000 </li>
+                  <li>Потребление энергии: <s></s> <i class="fa-solid fa-arrow-right"></i> 250 </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Sacu Serafim" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/ACU.png" loading="lazy" /> Серафим БМК</h3>
+              <span class="tag nerf">нерф</span>
+            </div>
+            <ul>
+              <li>
+                <ul>
+                  <h3><img src="../assets/images/balances/7/sera/nano%20aura%201.png" /> Регенерирующее поле 1</h3>
+                  <li>Потребление энергии: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 50 <span class="tag nerf">нерф</span></li>
+                </ul>
+                <ul>
+                  <h3><img src="../assets/images/balances/7/sera/nano%20aura%202.png" /> Регенерирующее поле 2</h3>
+                  <li>Потребление энергии: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 750 <span class="tag nerf">нерф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
 
           <article id="Colos" class="block card">
             <div class="flex-title">
@@ -215,32 +174,18 @@
               </li>
             </ul>
           </article>
-          <article id="t3-titan" class="block card">
+
+          <article id="t3 Titan" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/uef/land/T3Bot.png" loading="lazy" /> Т3 бот ОФЗ «Титан»</h3>
-              <span class="tag rebalance">переработка</span>
+              <span class="tag buff">бафф</span>
             </div>
-            <p><code>0f5502c18 — Upgrade the Titan assault bot</code></p>
             <ul>
-              <li>Время строительства: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 2250.</li>
-              <li>Юнит получил новую модель, собственные LOD, текстуры, mesh персонального щита и полный комплект анимаций.</li>
-              <li>Основное вооружение заменено двумя тяжёлыми плазменными пушками: 57 урона за выстрел, дальность 24.</li>
-              <li>Добавлена установка <b>Mini Cruise Missile Launcher Mk II</b>: залп из пяти ракет, дальность 5–24, ракеты распределяются между наземными целями, которые дольше всего не получали попадание.</li>
-              <li>В радиусе 6 от попадания ракеты на 15 секунд подавляют регенерацию брони. Первый эффект уменьшает её на 10%, следующие добавляют по 5%, предел — 45%.</li>
-              <li>Для ракет добавлен отдельный projectile и восемь новых эмиттеров взрыва.</li>
-              <li>Усилитель щитов Эон добавляет персональному щиту Titan 800 прочности.</li>
-            </ul>
-          </article>
-
-          <article id="sonance-impact" class="block card">
-            <div class="flex-title">
-              <h3><img src="../assets/images/units/aeon/land/T3MobileArty.png" loading="lazy" /> Т3 артиллерия Эон «Сонанс»</h3>
-              <span class="tag fix">эффект</span>
-            </div>
-            <p><code>5f7db82ad — Improve Sonance artillery impact feedback</code></p>
-            <ul>
-              <li>Попадание по земле, юниту или объекту создаёт длительное зелёное облако миазмы поверх стандартного эффекта.</li>
-              <li>Размер и время жизни облака согласованы с областью периодического урона: визуальный эффект показывает опасную зону и исчезает вместе с ней.</li>
+              <li>
+                <ul>
+                  <li>Скорость строительства: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 2250 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
 
@@ -271,52 +216,60 @@
               </li>
             </ul>
           </article>
-          <article id="t2-pillar" class="block card">
+
+          <article id="t2 Pilar" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/uef/land/T2Tank.png" loading="lazy" /> Т2 танк ОФЗ «Пилар»</h3>
-              <span class="tag rebalance">ребаланс</span>
+              <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Здоровье: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 2200.</li>
-              <li>Масса: <s>280</s> <i class="fa-solid fa-arrow-right"></i> 300.</li>
-              <li>Время строительства: <s>1250</s> <i class="fa-solid fa-arrow-right"></i> 1160.</li>
-              <li>Урон: <s>47,5</s> <i class="fa-solid fa-arrow-right"></i> 54.</li>
+              <li>
+                <ul>
+                  <li>Скорость строительства: <s>1250</s> <i class="fa-solid fa-arrow-right"></i> 1000 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
-          <article id="t2-riptide" class="block card">
+
+          <article id="t2 Reptaid" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/uef/land/T2HoverTank.png" loading="lazy" /> Т2 танк ОФЗ «Рептайд»</h3>
-              <span class="tag rebalance">ребаланс</span>
+              <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Здоровье: <s>1800</s> <i class="fa-solid fa-arrow-right"></i> 1600.</li>
-              <li>Масса: <s>320</s> <i class="fa-solid fa-arrow-right"></i> 250; энергия: <s>1650</s> <i class="fa-solid fa-arrow-right"></i> 1360.</li>
-              <li>Время строительства: <s>1420</s> <i class="fa-solid fa-arrow-right"></i> 920.</li>
-              <li>Дальность: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 20; скорость: <s>3,7</s> <i class="fa-solid fa-arrow-right"></i> 3,9.</li>
+              <li>
+                <ul>
+                  <li>Скорость строительства: <s>1420</s> <i class="fa-solid fa-arrow-right"></i> 1140 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
-          <article id="t2-rhino" class="block card">
+
+          <article id="t2 Rino" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/cybran/land/T2Tank.png" loading="lazy" /> Т2 танк Кибран «Носорог»</h3>
-              <span class="tag rebalance">ребаланс</span>
+              <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Здоровье: <s>1900</s> <i class="fa-solid fa-arrow-right"></i> 2000.</li>
-              <li>Масса: <s>290</s> <i class="fa-solid fa-arrow-right"></i> 300.</li>
-              <li>Время строительства: <s>1300</s> <i class="fa-solid fa-arrow-right"></i> 1160.</li>
-              <li>Урон: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 30.</li>
+              <li>
+                <ul>
+                  <li>Скорость строительства: <s>1300</s> <i class="fa-solid fa-arrow-right"></i> 1040 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
-          <article id="t2-wagner" class="block card">
+
+          <article id="t2 Wagner" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/cybran/land/T2HoverTank.png" loading="lazy" /> Т2 танк Кибран «Вагнер»</h3>
               <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Масса: <s>280</s> <i class="fa-solid fa-arrow-right"></i> 240; энергия: <s>1650</s> <i class="fa-solid fa-arrow-right"></i> 1280.</li>
-              <li>Время строительства: <s>1320</s> <i class="fa-solid fa-arrow-right"></i> 880.</li>
-              <li>Скорость: <s>3,7</s> <i class="fa-solid fa-arrow-right"></i> 3,9.</li>
-              <li>Ракета ПТУР получила небольшую доводку до цели.</li>
+              <li>
+                <ul>
+                  <li>Скорость строительства: <s>1320</s> <i class="fa-solid fa-arrow-right"></i> 1250 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
 
@@ -361,14 +314,18 @@
               </li>
             </ul>
           </article>
-          <article id="t2-yenzyne" class="block card">
+
+          <article id="t2 ianz" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/sera/land/T2HoverTank.png" loading="lazy" /> Т2 танк Серафим «Ян-Цзы»</h3>
               <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Время строительства: <s>1050</s> <i class="fa-solid fa-arrow-right"></i> 840.</li>
-              <li>Энергия: <s>1400</s> <i class="fa-solid fa-arrow-right"></i> 1200.</li>
+              <li>
+                <ul>
+                  <li>Скорость строительства: <s>1050</s> <i class="fa-solid fa-arrow-right"></i> 940 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
 
@@ -400,46 +357,64 @@
               <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
-              <li>Скорость полёта: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
-              <li>Здоровье: <s>848</s> <i class="fa-solid fa-arrow-right"></i> 850.</li>
+              <li>
+                <ul>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12 <span class="tag buff">бафф</span></li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15 <span class="tag buff">бафф</span></li>
+                  <li>Здоровье: <s>848</s> <i class="fa-solid fa-arrow-right"></i> 850 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
-          <article id="t2-uef-gunship" class="block card">
+
+          <article id="Flood Air n2 Stinger" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/uef/air/T2Gunship.png" loading="lazy" /> Штурмовик Т2 ОФЗ</h3>
-              <span class="tag rebalance">ребаланс</span>
+              <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Масса: <s>192</s> <i class="fa-solid fa-arrow-right"></i> 200; энергия: <s>3840</s> <i class="fa-solid fa-arrow-right"></i> 4000.</li>
-              <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
-              <li>Скорость полёта: <s>13,5</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
-              <li>Здоровье: <s>700</s> <i class="fa-solid fa-arrow-right"></i> 900.</li>
+              <li>
+                <ul>
+                  <li>Масса: <s>192</s> <i class="fa-solid fa-arrow-right"></i> 200 <span class="tag nerf">нерф</span></li>
+                  <li>Энергия: <s>3840</s> <i class="fa-solid fa-arrow-right"></i> 4000 <span class="tag nerf">нерф</span></li>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12 <span class="tag buff">бафф</span></li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15 <span class="tag buff">бафф</span></li>
+                  <li>Здоровье: <s>848</s> <i class="fa-solid fa-arrow-right"></i> 850 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
 
           <article id="Flood Air t2 Renegat" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/cybran/air/T2Gunship.png" loading="lazy" /> Штурмовик Т2 Кибран</h3>
-              <span class="tag rebalance">ребаланс</span>
+              <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
-              <li>Скорость полёта: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
-              <li>Здоровье: <s>832</s> <i class="fa-solid fa-arrow-right"></i> 830.</li>
+              <li>
+                <ul>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12 <span class="tag buff">бафф</span></li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15 <span class="tag buff">бафф</span></li>
+                  <li>Здоровье: <s>832</s> <i class="fa-solid fa-arrow-right"></i> 830 <span class="tag nerf">нерф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
 
           <article id="Flood Air t2 Wultu" class="block card">
             <div class="flex-title">
               <h3><img src="../assets/images/units/sera/air/T2Gunship.png" loading="lazy" /> Штурмовик Т2 Серафим</h3>
-              <span class="tag rebalance">ребаланс</span>
+              <span class="tag buff">бафф</span>
             </div>
             <ul>
-              <li>Масса: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 450.</li>
-              <li>Энергия: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 8100.</li>
-              <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
-              <li>Скорость полёта: <s>11</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+              <li>
+                <ul>
+                  <li>Масса: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 450 <span class="tag buff">бафф</span></li>
+                  <li>Энергия: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 8100 <span class="tag buff">бафф</span></li>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12 <span class="tag buff">бафф</span></li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
             </ul>
           </article>
 
@@ -451,6 +426,23 @@
             <ul>
               <li>
                 <ul>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12 <span class="tag buff">бафф</span></li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15 <span class="tag buff">бафф</span></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air t3 Restorer " class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/air/T3AAGunship.png" /> Штурмовик Т3 Эон</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <ul>
+              <li>
+                <ul>
+                  <li>Ракеты «воздух-воздух» теперь могут вести огонь по наземным целям: <span class="tag buff">бафф</span></li>
+                  <li>Радиус атаки ПВО: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 40 <span class="tag nerf">нерф</span></li>
                   <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12 <span class="tag buff">бафф</span></li>
                   <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15 <span class="tag buff">бафф</span></li>
                 </ul>
@@ -630,71 +622,6 @@
           </article>
         </section>
 
-        <!-- Интерфейс и технические изменения -->
-        <section class="block group">
-          <h2>Интерфейс и технические изменения</h2>
-
-          <article id="sacu-controls" class="block card">
-            <div class="flex-title">
-              <h3>Управление аурами и локализация</h3>
-              <span class="tag fix">интерфейс</span>
-            </div>
-            <p><code>8b49cf65d — Complete SACU aura controls and localization</code></p>
-            <ul>
-              <li>Добавлены отдельные кнопки включения радара, Энтропии, Усилителя щитов, Поля кинетического ускорения, Поля восстановления и Поля жизнестойкости.</li>
-              <li>Для каждой кнопки подготовлены обычное, выбранное, наведённое и отключённое состояния; порядок команд стабилен между разными наборами улучшений.</li>
-              <li>Добавлен скрипт, позволяющий воспроизводимо генерировать комплект DDS-кнопок.</li>
-              <li>Обновлены названия пресетов, описания улучшений и подсказки на русском и английском. Также исправлены ключи uab4202 и добавлены отсутствовавшие строки Pulsar и яиц Cybran.</li>
-            </ul>
-          </article>
-
-          <article id="regression-tests" class="block card">
-            <div class="flex-title">
-              <h3>Автоматические проверки механик</h3>
-              <span class="tag fix">стабильность</span>
-            </div>
-            <p><code>01b97d8fc — Add regression coverage for commander mechanics</code></p>
-            <ul>
-              <li>Добавлены проверки множителей и списка целей Усилителя щитов, сохранения урона и перезарядки щита, приоритета аур Серафимов и расширения радиусов сенсорами.</li>
-              <li>Проверяются ограничения категорий целей, штрафы носителей, переключатели аур, новые пресеты, Titan, его ракеты и эффекты, а также наличие всех используемых ключей локализации.</li>
-            </ul>
-          </article>
-
-          <article id="replay-team-colors" class="block card">
-            <div class="flex-title">
-              <h3>Командные цвета в повторах</h3>
-              <span class="tag fix">исправление</span>
-            </div>
-            <p><code>794a868af — Harden replay team color initialization</code></p>
-            <ul>
-              <li>Интерфейс больше не пытается вычислять отношения армий до появления корректной focus army.</li>
-              <li>Ручное и автоматическое включение командных цветов ждёт успешного расчёта, предотвращая ошибку с временным индексом армии −1 при запуске replay.</li>
-            </ul>
-          </article>
-
-          <article id="shield-target-localization" class="block card">
-            <div class="flex-title">
-              <h3>Уточнение целей Усилителя щитов</h3>
-              <span class="tag fix">локализация</span>
-            </div>
-            <p><code>7068c8a1e — Complete shield aura target localization</code></p>
-            <ul>
-              <li>В русских описаниях Titan и мобильного щита Серафимов указаны реальные бонусы: +800 и +2500 прочности щита соответственно.</li>
-            </ul>
-          </article>
-
-          <article id="legacy-titan" class="block card">
-            <div class="flex-title">
-              <h3>Старый Titan — UML0303</h3>
-              <span class="tag fix">без влияния на игру</span>
-            </div>
-            <p><code>6025c45ed — Add old Titan files unused by the game</code></p>
-            <ul>
-              <li>В репозиторий добавлена архивная версия старого Titan: blueprint, Lua, модели, LOD, текстуры, щит, анимации, иконка и RU/US-названия.</li>
-              <li>UML0303 не подключён к цепочкам строительства и не имеет внешних ссылок. В матчах продолжает использоваться актуальный UEL0303; архивные файлы не меняют баланс и игровой процесс.</li>
-            </ul>
-          </article>
-        </section>
       </div>
 
       <!-- Сайдбар -->
