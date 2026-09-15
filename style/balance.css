@@ -40,6 +40,42 @@ footer {
   grid-column: 1;
 }
 
+.content > section > h2,
+.content-group-divider {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #9eb4f5;
+  border-radius: 8px;
+  background: #7d96da;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 1px 1px #31436f;
+}
+
+.content > section > h2 {
+  margin: 0 0 -10px;
+}
+
+.content-group-divider {
+  margin: -10px 0;
+}
+
+.content > section > h2 + .content-group-divider {
+  margin-top: 0;
+}
+
+.commander-section > h2 {
+  display: none;
+}
+
+.commander-section > .content-group-divider:first-of-type {
+  margin-top: 0;
+}
+
 .flexbox-container {
   padding-left: 10px;
 }
@@ -64,10 +100,10 @@ footer {
 .icon-sidebar-wrapper {
   position: sticky;
   top: 20px;
-  background: var(--icon-grid-background);
+  background: transparent;
   color: var(--text-color);
   text-align: justify;
-  border-radius: 15px;
+  border-radius: 0;
   max-height: calc(100vh - 40px);
   height: calc(500px);
   overflow: hidden;
@@ -76,6 +112,7 @@ footer {
 .icon-sidebar {
   gap: 3px;
   overflow-y: scroll;
+  overscroll-behavior-y: contain;
   height: 100%;
 }
 
@@ -88,23 +125,79 @@ footer {
   margin-top: 15px;
 }
 
+.icon-sidebar .navigation-category-button {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 7px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  border: 1px solid var(--link-hover-color);
+  border-radius: 6px;
+  background: var(--card-background);
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-sidebar .navigation-section-button {
+  padding: 8px 7px;
+  margin-top: 0;
+  border-color: #9eb4f5;
+  background: #7d96da;
+  color: #fff;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 1px #31436f;
+}
+
+.icon-sidebar .navigation-category-button:hover,
+.icon-sidebar .navigation-category-button:focus-visible {
+  background: var(--link-hover-color);
+  color: var(--button-color);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 .icon-sidebar a {
   text-align: center;
 }
 
 .icon-sidebar-inner {
-  padding: 0 10px 10px;
+  padding: 0 3px 7px;
+}
+
+.navigation-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.navigation-section {
+  padding: 6px;
+  border: 2px solid rgb(255 255 255 / 10%);
+  border-radius: 15px;
+  background: var(--icon-grid-background);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 28%);
+}
+
+.navigation-section > .navigation-section-button:first-child {
+  margin-top: 0;
 }
 
 .icon-sidebar-subgrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 7px;
+  gap: 2px;
 }
 
 .icon-sidebar-subgrid img {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 6px;
   margin: 0;
   place-self: center;
@@ -124,6 +217,25 @@ footer {
     inset 0 0 3px 3px #aaa;
   transform: scale(1.1);
   z-index: 99;
+}
+
+/* Upgrade icons shown next to enhancement names in balance cards. */
+.card .upgrade-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 6px 2px 0;
+  border-radius: 4px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Command buttons added by Patch 13. */
+.card .order-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 6px 2px 0;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 /* Tag-colored borders for navigation icons */
@@ -148,8 +260,8 @@ footer {
 .sticky-navigation {
   position: sticky;
   top: 0;
-  padding: 10px 10px 0;
-  margin: 0 -10px;
+  padding: 7px 7px 0;
+  margin: 0 -7px;
   background: var(--icon-grid-background);
   z-index: 100;
 }
@@ -185,4 +297,97 @@ footer {
   .grid {
     padding: 0 10px;
   }
+}
+
+.card b .upgrade-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* Preset contents beneath each support commander. */
+.preset-section { display: grid; gap: 12px; }
+.preset-section h4 { margin: 0; font-size: 1.1rem; }
+.preset-table-scroll { overflow-x: auto; }
+.preset-table { width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; }
+.preset-table th, .preset-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--link-hover-color);
+  vertical-align: top;
+}
+.preset-table th[scope="row"] { width: 32%; font-weight: 600; }
+.preset-table thead { background: var(--group-background); }
+.card .preset-table ul { margin: 0; padding: 0; }
+.card .preset-table li { list-style: none; padding: 3px 0; }
+.card .preset-table .upgrade-icon { width: 32px; height: 32px; }
+
+.preset-category-heading th {
+  padding: 12px;
+  border: 0;
+  border-radius: 16px 16px 0 0;
+  color: #fff;
+  font-size: 1.15rem;
+  text-align: center;
+  text-shadow: 0 1px 1px rgb(0 0 0 / 45%);
+}
+
+.preset-category-heading:not(:first-child) th {
+  border-top: 10px solid var(--card-background);
+}
+
+.preset-category-economy { --preset-category-color: #3ea552; }
+.preset-category-support { --preset-category-color: #ff7f27; }
+.preset-category-exclusive { --preset-category-color: #168fca; }
+.preset-category-combat { --preset-category-color: #d84848; }
+.preset-category-special { --preset-category-color: #8f51bd; }
+
+.preset-category-heading th {
+  background: var(--preset-category-color);
+}
+
+.preset-table tbody tr[data-preset] > :first-child {
+  border-left: 4px solid var(--preset-category-color);
+}
+
+.preset-table tbody tr[data-preset] > :last-child {
+  border-right: 4px solid var(--preset-category-color);
+}
+
+.preset-table tbody tr.preset-category-last > * {
+  border-bottom: 4px solid var(--preset-category-color);
+}
+
+.preset-table tbody tr.preset-category-last > :first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.preset-table tbody tr.preset-category-last > :last-child {
+  border-bottom-right-radius: 16px;
+}
+
+/* Keep every icon in the final commander icon showcase at preset size. */
+#commander-icons .upgrade-icon,
+#commander-icons .preset-icon,
+#commander-icons .order-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 6px 2px 0;
+  object-fit: contain;
+  vertical-align: middle;
+}
+/* Match only off-palette assets to vanilla references; neutral RGB and alpha stay unchanged. */
+.upgrade-palette-filters { position: absolute; pointer-events: none; }
+.card .upgrade-icon[src*="/entropy_up.png"] { filter: url("#palette-entropy"); }
+.card .upgrade-icon[src*="/shield_aura_up.png"] { filter: url("#palette-shield-aura"); }
+.card .upgrade-icon[src*="/shield_light_up.png"] { filter: url("#palette-shield-light"); }
+.card .upgrade-icon[src*="/shield_heavy_up.png"] { filter: url("#palette-shield-heavy"); }
+.card .upgrade-icon[src*="/original/sera/ras_btn_up.png"] { filter: url("#palette-sera-ras"); }
+
+/* Actual build icons beside each preset name. */
+.preset-name { display: flex; align-items: center; gap: 10px; }
+.card .preset-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+  border-radius: 0;
 }

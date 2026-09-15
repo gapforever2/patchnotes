@@ -1,0 +1,1572 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>GAP Forever — Патч 13 «На подхвате»</title>
+    <meta name="twitter:title" content="GAP Forever — Патч 13 «На подхвате»" />
+    <meta property="og:title" content="GAP Forever — Патч 13 «На подхвате»" />
+    <meta property="og:image:alt" content="GAP Forever — Патч 13 «На подхвате»" />
+    <!-- META Tags for Social Sharing -->
+    <meta property="og:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gapforever2.github.io/patchnotes/" />
+    <meta property="og:image" content="../assets/images/thumbnail/thumbnail.png" />
+    <meta name="twitter:name" content="GAP Forever" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Здесь самая актуальная информация по балансу в GAP Forever" />
+    <meta name="twitter:image" content="../assets/images/thumbnail/thumbnail.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/balance.css?v=13-preset-groups-2" />
+    <!-- JS -->
+    <script src="../scripts/main.js?v=13-structure-aa-order"></script>
+    <style>
+      .tag {
+        display: inline-block;
+        margin-left: 12px;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.75em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .tag.buff { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+      .tag.nerf { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+      .tag.fix { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+      .tag.rebalance { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+      .flex-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .flex-title h3 {
+        margin: 0;
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg class="upgrade-palette-filters" width="0" height="0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+      <filter id="palette-entropy" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.0089765 0.0431564 -0.0521329 0 0 0.0169557 1.0815176 -0.0984732 0 0 0.0039896 0.0191806 0.9768298 0 0 0 0 0 1 0" /></filter>
+      <filter id="palette-shield-aura" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.0090488 0.0480715 -0.0571202 0 0 0.0135731 1.0721072 -0.0856804 0 0 0.0036195 0.0192286 0.9771519 0 0 0 0 0 1 0" /></filter>
+      <filter id="palette-shield-light" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.0141724 -0.0039882 -0.0101842 0 0 -0.0850347 1.0239294 0.0611053 0 0 -0.1133795 0.0319058 1.0814737 0 0 0 0 0 1 0" /></filter>
+      <filter id="palette-shield-heavy" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.0180293 -0.0049841 -0.0130453 0 0 -0.0450734 1.0124602 0.0326132 0 0 -0.0540880 0.0149522 1.0391358 0 0 0 0 0 1 0" /></filter>
+      <filter id="palette-sera-ras" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.0000000 0.0000000 0.0000000 0 0 -0.0271004 0.9879256 0.0391748 0 0 0.0993680 0.0442729 0.8563592 0 0 0 0 0 1 0" /></filter>
+    </defs></svg>
+    <main class="grid">
+      <div id="top" class="content">
+        <header class="flexbox-container">
+          <h1 class="flex-grow-1"><img class="logo" src="../assets/images/faction/gaf-logo.svg" loading="lazy" alt="GAF" /> Баланс</h1>
+          <div class="text-right">Дата обновления: 01.10.2026 г.</div>
+        </header>
+
+        <section class="block group">
+          <h2>О патче</h2>
+
+          <article id="about-patch" class="block card">
+            <h3>Патч 14 «На подхвате»</h3>
+            <p>Здравствуйте, Командующие! В этом балансном патче была проделана огромная работа над аурами БМК и АКБП, наземной техникой (в том числе забытыми ховерами), сонарами и многим другим. Улучшения и ключевые пресеты командиров получили новые иконки.</p>
+            <p>Теперь игроки на передовой будут меньше зависеть от воздушных юнитов: наконец-то на фронте появятся зенитки, способные защитить вас от вражеской авиации.</p>
+            <p>Но для воздушных юнитов есть и хорошие новости. Радиус взрыва масс-фабрикаторов стал значительно меньше. Раньше их взрывы могли уничтожать штурмовики, которые атаковали эти сооружения.</p>
+            <p>Мы помним изменения прошлого патча, когда убрали чрезмерно большой радиус подводного обзора у крейсеров, и теперь передали эту функцию сонарам Т2. Именно они будут обнаруживать подводные строения и юниты. Теперь сонары Т2 всех фракций могут плавать, как и серафимские.</p>
+            <p>
+              <b>Дисклеймер</b>: Внесённые изменения могут иметь непредвиденные эффекты. Если вы столкнётесь с одним из них, просим сообщить нам в социальных сетях:
+              <a href="https://discord.com/invite/3wvXGZHHFp" target="_blank">Discord GAF</a>,
+              <a href="https://t.me/gapforeveroff" target="_blank">Telegram GAF</a>!
+            </p>
+            <p>
+              <b>Интересное</b>: Если вы хотите поддержать проект GAF и получать эксклюзивный контент, вы можете сделать это здесь:
+              <a href="https://boosty.to/gapforever.com" target="_blank">Boosty GAF</a>.
+            </p>
+            <p class="text-right">
+              <i><b>Баланс-команда: llN, Shkiper, Armagedon, Angel.</b></i>
+            </p>
+          </article>
+        </section>
+        <!-- БМК, АКБП и механики -->
+        <section class="block group commander-section">
+          <h2>БМК, АКБП и механики</h2>
+
+
+
+          <article id="aeon-acu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/Acu.png?v=13-clean-unit-icons" loading="lazy" /> Эон БМК</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>Изменено потребление энергии <img class="upgrade-icon" src="../assets/images/upgrades/faf/aeon/chrono.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Хроноглушителем. Щиты БМК включены в список целей <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/aeon/chrono.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Хроноглушитель:</b>
+                    <ul>
+                      <li>Потребление энергии за волну: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 200.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/aeon/shield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Лёгкий персональный щит:</b>
+                    <ul>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>8000</s> <i class="fa-solid fa-arrow-right"></i> 10000 (+2000).</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/aeon/heavyshield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Тяжёлый персональный щит:</b>
+                    <ul>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>25000</s> <i class="fa-solid fa-arrow-right"></i> 30000 (+5000).</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/aeon/sensor.png?v=13-controls" width="32" height="32" loading="lazy" alt="" />Улучшенные сенсоры:</b>
+                    <ul><li><img class="order-icon" src="../assets/images/orders/intel.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения улучшенных сенсоров.</li></ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="aeon-sacu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/Scu.png?v=13-clean-unit-icons" loading="lazy" /> Эон АКБП</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>Добавлены <img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_entropy_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Поле Энтропии и <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилитель щитов. Обновлены <img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_sic_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />система наноремонта, щиты и боевые пресеты.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_entropy_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Поле Энтропии:</b>
+                    <ul>
+                      <li>Стоимость: 1200 массы и 30000 энергии.</li>
+                      <li>Билд тайм: 5040 (Для стокового АКБП: 90 секунд).</li>
+                      <li>Радиус: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 28.</li>
+                      <li>Радиус с улучшенными сенсорами: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li>Потребление энергии за волну: 500.</li>
+                      <li>Интервал между волнами: 10 секунд.</li>
+                      <li>Снижение регенерации противника: 65% на 15 секунд.</li>
+                      <li>Снижение скорости противника: 10% на 15 секунд.</li>
+                      <li>Урон по щиту: 500 за волну.</li>
+                      <li>Урон основного орудия носителя: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 100.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-entropy-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения Поля Энтропии.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилитель щитов:</b>
+                    <ul>
+                      <li>Стоимость: 1750 массы и 75000 энергии.</li>
+                      <li>Билд тайм: 5600 (Для стокового АКБП: 100 секунд).</li>
+                      <li>Содержание: 500 энергии/с.</li>
+                      <li>Радиус: 30.</li>
+                      <li>Радиус с улучшенными сенсорами: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li>Максимальное здоровье носителя: −5500.</li>
+                      <li>Эффект нескольких <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилителей щитов не складывается.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-shield-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения Усилителя щитов.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_sic_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Улучшенная система наноремонта:</b>
+                    <ul>
+                      <li>Максимальное здоровье: +2000.</li>
+                      <li>Регенерация здоровья: 50 HP/с.</li>
+                      <li>Скорость передвижения: +15%.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/aeon-aura-green/balances_7_aeon_rads_btn_up_1.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Усилитель радара:</b>
+                    <ul>
+                      <li>Радиус радара: <s>110</s> <i class="fa-solid fa-arrow-right"></i> 100.</li>
+                      <li>Радиус Поля Энтропии и Усилителя щитов: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li><img class="order-icon" src="../assets/images/orders/intel.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения улучшенных сенсоров.</li>
+                    </ul>
+                  </li>
+                  <li><b>Юниты, подверженные влиянию апгрейда «<img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилителя щитов»:</b></li>
+                  <li>Все юниты с персональными или купольными щитами, кроме структур, воздушных и морских юнитов. При наведении на эти юниты можно прочитать бафы от ауры «<img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилителя щитов».</li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="preset-section"><h4>Пресеты и установленные улучшения</h4><div class="preset-table-scroll"><table class="preset-table"><thead><tr><th scope="col">Пресет</th><th scope="col">Улучшения при постройке</th></tr></thead><tbody>
+                <tr data-preset="Engineer"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_Engineer_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Коммунист</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_efm_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Специализированный инженерный модуль</li></ul></td></tr>
+                <tr data-preset="Defiler"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_Defiler_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Осквернитель</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_entropy_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Поле Энтропии</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_tsg_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Персональный щит</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/balances_7_aeon_rads_btn_up_1.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="Aegis"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_Aegis_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Эгида</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилитель щитов</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_sic_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Ремонтная нано-система</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/balances_7_aeon_rads_btn_up_1.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="Heretic"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/UAL0301_Heretic.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Иноверец</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_entropy_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Поле Энтропии</li><li><img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилитель щитов</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_sic_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Ремонтная нано-система</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/balances_7_aeon_rads_btn_up_1.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="RAS"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_RAS_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Добытчик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_ras_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li></ul></td></tr>
+                <tr data-preset="RASE"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_RASE_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Труженик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_ras_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_efm_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Специализированный инженерный модуль</li></ul></td></tr>
+                <tr data-preset="Rambo"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_Rambo_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Инквизитор</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_hsa_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Дестабилизатор</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_tsg_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Персональный щит</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_phtsg_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Тяж. персон. щит</li></ul></td></tr>
+                <tr data-preset="ShieldCombat"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_ShieldCombat_icon.png?v=13-aeon-aura-green" width="48" height="48" loading="lazy" alt="" /><span>Инквизитор</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_hsa_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Дестабилизатор</li><li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_original_aeon_tsg_btn_up.png?v=13-aeon-aura-green" width="32" height="32" loading="lazy" alt="" />Персональный щит</li></ul></td></tr>
+              </tbody></table></div></div>
+          </article>
+
+          <article id="uef-acu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/ACU.png?v=13-clean-unit-icons" loading="lazy" /> ОФЗ БМК</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p><img class="upgrade-icon" src="../assets/images/upgrades/faf/uef/personalshield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Персональный и <img class="upgrade-icon" src="../assets/images/upgrades/faf/uef/bubbleshield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />купольный щиты БМК включены в список целей <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/uef/personalshield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Персональный щит:</b>
+                    <ul>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>19000</s> <i class="fa-solid fa-arrow-right"></i> 22000 (+3000).</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/uef/bubbleshield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Купольный щит:</b>
+                    <ul>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>7000</s> <i class="fa-solid fa-arrow-right"></i> 15000 (+8000).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="uef-sacu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/SCU.png?v=13-clean-unit-icons" loading="lazy" /> ОФЗ АКБП</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>Переработаны <img class="upgrade-icon" src="../assets/images/upgrades/shield_light_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />лёгкий и <img class="upgrade-icon" src="../assets/images/upgrades/shield_heavy_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />тяжёлый купольные щиты. Все варианты щита АКБП включены в список целей <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/uef/jammer.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Генератор помех:</b>
+                    <ul>
+                      <li>Стоимость: 350 массы и 8000 энергии.</li>
+                      <li>Билд тайм: 1120 (Для стокового АКБП: 20 секунд).</li>
+                      <li>Содержание: 20 энергии/с.</li>
+                      <li>Радиус помех: 26.</li>
+                      <li><img class="order-icon" src="../assets/images/orders/jamming.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения Генератора помех.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/psg_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Персональный щит:</b>
+                    <ul>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>26000</s> <i class="fa-solid fa-arrow-right"></i> 28000 (+2000).</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/shield_light_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Лёгкий купольный щит:</b>
+                    <ul>
+                      <li>Стоимость: 2250 массы и 70000 энергии.</li>
+                      <li>Билд тайм: 6000 (Для стокового АКБП: 107,1 секунды).</li>
+                      <li>Прочность щита: 17500.</li>
+                      <li>Регенерация щита: 50 HP/с.</li>
+                      <li>Радиус щита: 35.</li>
+                      <li>Содержание: 720 энергии/с.</li>
+                      <li>Радиус щита с улучшенными сенсорами: 50.</li>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>17500</s> <i class="fa-solid fa-arrow-right"></i> 18500 (+1000).</li>
+                      <li><img class="order-icon" src="../assets/images/orders/shield-dome.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения купольного щита.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/shield_heavy_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Тяжёлый купольный щит:</b>
+                    <ul>
+                      <li>Стоимость: 3500 массы и 150000 энергии.</li>
+                      <li>Билд тайм: 10080 (Для стокового АКБП: 180 секунд).</li>
+                      <li>Прочность щита: 52000.</li>
+                      <li>Регенерация щита: 150 HP/с.</li>
+                      <li>Радиус щита: 20.</li>
+                      <li>Содержание: 1220 энергии/с.</li>
+                      <li>Улучшенные сенсоры не изменяют радиус щита.</li>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>52000</s> <i class="fa-solid fa-arrow-right"></i> 54000 (+2000).</li>
+                      <li><img class="order-icon" src="../assets/images/orders/shield-dome.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения купольного щита.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/sre_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилитель радара:</b>
+                    <ul>
+                      <li>Радиус обзора: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 30.</li>
+                      <li><img class="order-icon" src="../assets/images/orders/intel.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения улучшенных сенсоров.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="preset-section"><h4>Пресеты и установленные улучшения</h4><div class="preset-table-scroll"><table class="preset-table"><thead><tr><th scope="col">Пресет</th><th scope="col">Улучшения при постройке</th></tr></thead><tbody>
+                <tr data-preset="LastBastion"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_LastBastion_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Последний оплот</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/uef/jammer.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Генератор помех</li><li><img class="upgrade-icon" src="../assets/images/upgrades/shield_heavy_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Тяжелый купольный щит</li></ul></td></tr>
+                <tr data-preset="Mountain"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_Mountain_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Гора</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/sre_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li><li><img class="upgrade-icon" src="../assets/images/final-icons/uef/jammer.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Генератор помех</li><li><img class="upgrade-icon" src="../assets/images/upgrades/shield_light_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Легкий купольный щит</li></ul></td></tr>
+                <tr data-preset="Combat"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_Combat_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Патриот</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/acu_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Улучшенный модуль охлаждения</li><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/heo_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Фугасный плазменный заряд</li></ul></td></tr>
+                <tr data-preset="Engineer"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_Engineer_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Навальный</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/ed_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Инженерный дроид C-D2</li></ul></td></tr>
+                <tr data-preset="RASE"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_RASE_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Труженик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/isb_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/ed_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Инженерный дроид C-D2</li></ul></td></tr>
+                <tr data-preset="RAS"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_RAS_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Добытчик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/isb_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li></ul></td></tr>
+                <tr data-preset="Rambo"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/presets/UEL0301_Rambo_icon.png" width="48" height="48" loading="lazy" alt="" /><span>Терминатор</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/acu_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Улучшенный модуль охлаждения</li><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/heo_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Фугасный плазменный заряд</li><li><img class="upgrade-icon" src="../assets/images/upgrades/original/uef/psg_btn_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Персональный щит</li></ul></td></tr>
+              </tbody></table></div></div>
+          </article>
+
+          <article id="cybran-acu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/ACU.png?v=13-clean-unit-icons" loading="lazy" /> Кибран БМК</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>Переработаны <img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Стелс-поле, <img class="upgrade-icon" src="../assets/images/upgrades/faf/cybran/cloack.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />оптическая маскировка и <img class="upgrade-icon" src="../assets/images/upgrades/faf/cybran/torp.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />торпедное вооружение.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/cybran/personal_stealth.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Персональный стелс-генератор:</b>
+                    <ul><li>Стоимость массы: <s>650</s> → 600.</li><li>Стоимость энергии: <s>12000</s> → 10000.</li><li>Билд тайм: 600 (Для стокового БМК: 60 секунд).</li><li>Содержание: 50 энергии/с.</li><li>Максимальное здоровье носителя: +2000.</li></ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Стелс-поле:</b>
+                    <ul>
+                      <li>Стоимость: 1000 массы и 24000 энергии.</li>
+                      <li>Билд тайм: 900 (Для стокового БМК: 90 секунд).</li>
+                      <li>Содержание: 170 энергии/с.</li>
+                      <li>Радиус: 26.</li>
+                      <li>Максимальное здоровье носителя: +1750.</li>
+                      <li>Скрывает от радара и сонара БМК и союзные войска.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/cybran/cloack.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Персональная оптическая маскировка:</b>
+                    <ul>
+                      <li>Максимальное здоровье: +12000.</li>
+                      <li>Содержание: 3000 энергии/с.</li>
+                      <li>Радарная и сонарная маскировка исключены.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/cybran/torp.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Нанитовый торпедный аппарат:</b>
+                    <ul>
+                      <li>Урон торпеды: 300.</li>
+                      <li>Дальность: 60.</li>
+                      <li>Размер залпа: 3 торпеды.</li>
+                      <li>Прочность торпеды: 3.</li>
+                      <li>Радиус радара и сонара: 65.</li>
+                      <li>Подводная скорость: <s>1,7</s> <i class="fa-solid fa-arrow-right"></i> 2,2.</li>
+                      <li>Торпеды перехватываются противоторпедной защитой.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="cybran-sacu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/SCU.png?v=13-clean-unit-icons" loading="lazy" /> Кибран АКБП</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>Добавлены <img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_fc_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />электромагнитное воздействие, союзное <img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Стелс-поле и <img class="upgrade-icon" src="../assets/images/final-icons/cybran/speed_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле кинетического ускорения.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_fc_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Специализированный преобразователь:</b>
+                    <ul>
+                      <li>Дальность основного орудия: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 35.</li>
+                      <li>Дополнительный урон по щитам: 300 в радиусе 3.</li>
+                      <li>Оглушение Т1: 4 секунды.</li>
+                      <li>Оглушение Т2: 3,5 секунды.</li>
+                      <li>Оглушение Т3: 3 секунды.</li>
+                      <li>Оглушение АКБП: 0,3 секунды.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Стелс-поле:</b>
+                    <ul>
+                      <li>Стоимость: 800 массы и 24000 энергии.</li>
+                      <li>Билд тайм: 900 (Для стокового АКБП: 16,1 секунды).</li>
+                      <li>Содержание: 170 энергии/с.</li>
+                      <li>Радиус: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 28.</li>
+                      <li>Радиус с улучшенными сенсорами: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li>Скрывает от радара и сонара АКБП и союзные войска.</li>
+                      <li><img class="order-icon" src="../assets/images/orders/stealth-field.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения Стелс-поля.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/cybran/speed_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле кинетического ускорения:</b>
+                    <ul>
+                      <li>Стоимость: 1400 массы и 58000 энергии.</li>
+                      <li>Билд тайм: 5600 (Для стокового АКБП: 100 секунд).</li>
+                      <li>Содержание: 520 энергии/с.</li>
+                      <li>Радиус: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 28.</li>
+                      <li>Радиус с улучшенными сенсорами: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li>Скорость Т1 и АКБП: +35%.</li>
+                      <li>Скорость Т2: +20%.</li>
+                      <li>Скорость Т3: +15%.</li>
+                      <li>Скорость носителя: <s>2,0</s> <i class="fa-solid fa-arrow-right"></i> 2,7.</li>
+                      <li>Максимальное здоровье носителя: −4500.</li>
+                      <li>Урон основного орудия носителя: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 100.</li>
+                      <li>Эффект нескольких полей не складывается.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-speed-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения Поля кинетического ускорения.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/cybran-orange/balances_7_kibran_rads_btn_up_1_1.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Усилитель радара:</b>
+                    <ul>
+                      <li>Радиус радара: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 100.</li>
+                      <li>Радиус Стелс-поля и Поля кинетического ускорения: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li><img class="order-icon" src="../assets/images/orders/intel.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения улучшенных сенсоров.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="preset-section"><h4>Пресеты и установленные улучшения</h4><div class="preset-table-scroll"><table class="preset-table"><thead><tr><th scope="col">Пресет</th><th scope="col">Улучшения при постройке</th></tr></thead><tbody>
+                <tr data-preset="Cloak"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_Cloak_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Тень</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_fc_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Специализированный преобразователь</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_acu_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Модуль охлаждения</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_cfs_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Персональный генератор невидимости</li></ul></td></tr>
+                <tr data-preset="Combat"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_Combat_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Скиталец</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_acu_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Модуль охлаждения</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_fc_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Специализированный преобразователь</li></ul></td></tr>
+                <tr data-preset="Engineer"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_Engineer_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Коммунист</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_ses_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Инженерный комплекс</li></ul></td></tr>
+                <tr data-preset="RAS"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_RAS_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Добытчик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_ras_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li></ul></td></tr>
+                <tr data-preset="RASE"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_RASE_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Труженик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_ras_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_ses_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Инженерный комплекс</li></ul></td></tr>
+                <tr data-preset="AntiAirGunner"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_AntiAirGunner_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Зенитчик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/personal_stealth.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Персональный стелс генератор</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_nms_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Нанитовая ракетная система</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/balances_7_kibran_rads_btn_up_1_1.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="CrossFighter"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/URL0301_CrossFighter.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Кросс-Файтер</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/speed_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле кинетического ускорения</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/balances_7_kibran_rads_btn_up_1_1.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="Veil"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/URL0301_Veil.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Вуаль</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/personal_stealth.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Персональный стелс генератор</li><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Генератор поля невидимости</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/balances_7_kibran_rads_btn_up_1_1.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="Mirage"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/URL0301_Mirage.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Мираж</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/personal_stealth.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Персональный стелс генератор</li><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Генератор поля невидимости</li><li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/speed_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле кинетического ускорения</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/balances_7_kibran_rads_btn_up_1_1.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="Rambo"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/cybran-orange/presets_URL0301_Rambo_icon.png?v=13-cybran-orange" width="48" height="48" loading="lazy" alt="" /><span>Каракал</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_fc_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Специализированный преобразователь</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_acu_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Модуль охлаждения</li><li><img class="upgrade-icon" src="../assets/images/cybran-orange/upgrades_original_cybran_srs_btn_up.png?v=13-cybran-orange" width="32" height="32" loading="lazy" alt="" />Ремонтная нано-система</li></ul></td></tr>
+              </tbody></table></div></div>
+          </article>
+
+          <article id="seraphim-acu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/ACU.png?v=13-clean-unit-icons" loading="lazy" /> Серафим БМК</h3>
+              <span class="tag nerf">нерф</span>
+            </div>
+            <p>Добавлено потребление энергии регенерирующими полями.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/sera/regenfield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Базовое регенерирующее поле:</b>
+                    <ul>
+                      <li>Содержание: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 50 энергии/с.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-restoration-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения базового регенерирующего поля.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/upgrades/faf/sera/advancedregenfield.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Улучшенное регенерирующее поле:</b>
+                    <ul>
+                      <li>Содержание: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 750 энергии/с.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-restoration-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения улучшенного регенерирующего поля.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="seraphim-sacu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/SCU.png?v=13-clean-unit-icons" loading="lazy" /> Серафим АКБП</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>Добавлены <img class="upgrade-icon" src="../assets/images/final-icons/seraphim/regen_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле восстановления, <img class="upgrade-icon" src="../assets/images/final-icons/seraphim/health_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле жизнестойкости и <img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_faf_sera_shield.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />сверхлёгкий персональный щит.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/regen_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле восстановления:</b>
+                    <ul>
+                      <li>Стоимость: 2500 массы и 30000 энергии.</li>
+                      <li>Билд тайм: 3360 (Для стокового АКБП: 60 секунд).</li>
+                      <li>Содержание: 500 энергии/с.</li>
+                      <li>Радиус: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 28.</li>
+                      <li>Радиус с улучшенными сенсорами: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li>Регенерация: 2,75% базового максимального здоровья/с.</li>
+                      <li>Минимальная итоговая регенерация: 9 HP/с.</li>
+                      <li>Предел бонуса Т1: +15 HP/с.</li>
+                      <li>Предел бонуса Т2: +30 HP/с.</li>
+                      <li>Предел бонуса Т3: +70 HP/с.</li>
+                      <li>Предел бонуса экспериментальных юнитов: +90 HP/с.</li>
+                      <li>Предел бонуса АКБП: +20 HP/с.</li>
+                      <li>Максимальное здоровье носителя: <s>−7000</s> <i class="fa-solid fa-arrow-right"></i> −4000.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-restoration-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения Поля восстановления.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/health_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле жизнестойкости:</b>
+                    <ul>
+                      <li>Стоимость: 1000 массы и 25000 энергии.</li>
+                      <li>Билд тайм: 2800 (Для стокового АКБП: 50 секунд).</li>
+                      <li>Содержание: 250 энергии/с.</li>
+                      <li>Радиус: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 28.</li>
+                      <li>Радиус с улучшенными сенсорами: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li>Максимальное здоровье союзников: +15%.</li>
+                      <li><img class="order-icon" src="../assets/images/buttons/sacu-vitality-aura.png?v=13-controls" loading="lazy" alt="" />Добавлена кнопка включения и выключения Поля жизнестойкости.</li>
+                    </ul>
+                  </li>
+                  <li><b>Общие цели полей:</b>
+                    <ul>
+                      <li>Наземные, ховерные и амфибийные юниты всех фракций, включая инженеров и АКБП.</li>
+                      <li>БМК, авиация, флот и здания исключены.</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_faf_sera_shield.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Сверхлёгкий персональный щит:</b>
+                    <ul>
+                      <li>Стоимость: 1000 массы и 10000 энергии.</li>
+                      <li>Билд тайм: 1960 (Для стокового АКБП: 35 секунд).</li>
+                      <li>Требуется <img class="upgrade-icon" src="../assets/images/final-icons/seraphim/regen_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле восстановления.</li>
+                      <li>Прочность щита: 5000.</li>
+                      <li>Регенерация щита: 25 HP/с.</li>
+                      <li>Содержание: 170 энергии/с.</li>
+                      <li>Штраф к максимальному здоровью носителя: <s>−5000</s> <i class="fa-solid fa-arrow-right"></i> 0.</li>
+                      <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_shield_aura_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>5000</s> <i class="fa-solid fa-arrow-right"></i> 6000 (+1000).</li>
+                    </ul>
+                  </li>
+                  <li><b><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_sre_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Усилитель радара:</b>
+                    <ul>
+                      <li>Радиус радара: <s>90</s> <i class="fa-solid fa-arrow-right"></i> 125.</li>
+                      <li>Радиус всенаправленного сенсора: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 40.</li>
+                      <li>Радиус обзора: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 45.</li>
+                      <li>Радиус Поля восстановления и Поля жизнестойкости: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 38.</li>
+                      <li><img class="order-icon" src="../assets/images/orders/intel.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения улучшенных сенсоров.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="preset-section"><h4>Пресеты и установленные улучшения</h4><div class="preset-table-scroll"><table class="preset-table"><thead><tr><th scope="col">Пресет</th><th scope="col">Улучшения при постройке</th></tr></thead><tbody>
+                <tr data-preset="AdvancedCombat"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/seraphim-yellow/presets_XSL0301_AdvancedCombat_icon.png?v=13-seraphim-yellow" width="48" height="48" loading="lazy" alt="" /><span>Громовержец</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_cba_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Улучшенные Фокусировочные Линзы</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_dss_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Ремонтная нано-система</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_oc_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Перегрузка</li></ul></td></tr>
+                <tr data-preset="Engineer"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/seraphim-yellow/presets_XSL0301_Engineer_icon.png?v=13-seraphim-yellow" width="48" height="48" loading="lazy" alt="" /><span>Коммунист</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_efm_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Улучшение производительности</li></ul></td></tr>
+                <tr data-preset="RAS"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/seraphim-yellow/presets_XSL0301_RAS_icon.png?v=13-seraphim-yellow" width="48" height="48" loading="lazy" alt="" /><span>Добытчик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_ras_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li></ul></td></tr>
+                <tr data-preset="RASE"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/seraphim-yellow/presets_XSL0301_RASE_icon.png?v=13-seraphim-yellow" width="48" height="48" loading="lazy" alt="" /><span>Труженик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_ras_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Система распределения ресурсов</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_efm_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Улучшение производительности</li></ul></td></tr>
+                <tr data-preset="SethToth"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/XSL0301_SethToth.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Сетх-Тотх</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/health_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле жизнестойкости</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_dss_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Ремонтная нано-система</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_sre_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="SethIyah"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/XSL0301_SethIyah.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Сетх-Ях</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/regen_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле восстановления</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_sp_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Сверхлегкий персональный щит</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_sre_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="SethUhtheIyah"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/final-icons/presets/XSL0301_SethUhtheIyah.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /><span>Сетх-Узе-Ях</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/health_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле жизнестойкости</li><li><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/regen_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" />Поле восстановления</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_sp_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Сверхлегкий персональный щит</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_sre_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Усилитель радара</li></ul></td></tr>
+                <tr data-preset="Missile"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/seraphim-yellow/presets_XSL0301_Missile_icon.png?v=13-seraphim-yellow" width="48" height="48" loading="lazy" alt="" /><span>Баллистик</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_efm_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Улучшение производительности</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_tmu_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Пусковая установка тактических ракет</li></ul></td></tr>
+                <tr data-preset="NanoCombat"><th scope="row"><span class="preset-name"><img class="preset-icon" src="../assets/images/seraphim-yellow/presets_XSL0301_NanoCombat_icon.png?v=13-seraphim-yellow" width="48" height="48" loading="lazy" alt="" /><span>Тал-Восса</span></span></th><td><ul><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_cba_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Улучшенные Фокусировочные Линзы</li><li><img class="upgrade-icon" src="../assets/images/seraphim-yellow/upgrades_original_sera_dss_btn_up.png?v=13-seraphim-yellow" width="32" height="32" loading="lazy" alt="" />Ремонтная нано-система</li></ul></td></tr>
+              </tbody></table></div></div>
+          </article>
+
+        </section>
+
+        <!-- Наземные юниты -->
+        <section class="block group">
+          <h2>Наземные юниты</h2>
+
+          <article id="colossus" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T4GC.png?v=13-vanilla-palettes-2" loading="lazy" /> Экспериментальный штурмовой бот Эон «Колосс»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышены здоровье и урон основного лазера. Характеристики возвращены к прежним значениям, поскольку экспериментальный юнит не оправдывал свою высокую стоимость.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Урон лазера в секунду: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 2500.</li>
+                  <li>Здоровье: <s>99999</s> <i class="fa-solid fa-arrow-right"></i> 100000.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="parashield" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T2MobileShield.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 мобильный щит ОФЗ «Колпак»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Снижено потребление энергии. «Колпак» получает усиление от <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов, так как оснащён купольным щитом.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Потребление энергии: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 50.</li>
+                  <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>3000</s> <i class="fa-solid fa-arrow-right"></i> 3750 (+750).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t3 loist" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/T3AssultBot.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 бот Кибран «Лоялист»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сокращено время строительства.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Время строительства: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 2250 (Для Т3 завода: 25 секунд).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t3-titan" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T3Bot.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 бот ОФЗ «Титан»</h3>
+              <span class="tag rebalance">переработка</span>
+            </div>
+            <p>«Титан» переработан как штурмовой бот ближней дистанции, способный противостоять регенерации вражеской техники. Обновлены модель, основное вооружение и ракетная система подавления регенерации.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Время строительства: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 2250 (Для Т3 завода: 25 секунд).</li>
+              <li>Урон основного орудия: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 57.</li>
+              <li>Урон основного орудия в секунду: <s>200</s> <i class="fa-solid fa-arrow-right"></i> 190.</li>
+              <li>Добавлена установка <b>Mini Cruise Missile Launcher Mk II:</b>
+                <ul>
+                  <li>Размер залпа: 5 ракет.</li>
+                  <li>Урон одной ракеты: 10.</li>
+                  <li>Урон полного залпа: 50.</li>
+                  <li>Урон в секунду: 10.</li>
+                  <li>Дальность: 5–24.</li>
+                  <li>Ракеты распределяются между наземными целями, которые дольше всего не получали попадание.</li>
+                  <li>Радиус подавления регенерации брони: 6.</li>
+                  <li>Продолжительность подавления: 15 секунд.</li>
+                  <li>Первое попадание снижает регенерацию на 10%.</li>
+                  <li>Каждое следующее попадание дополнительно снижает регенерацию на 5%.</li>
+                  <li>Максимальное снижение регенерации: 45%.</li>
+                </ul>
+              </li>
+              <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>700</s> <i class="fa-solid fa-arrow-right"></i> 1500 (+800).</li>
+              <li><img class="order-icon" src="../assets/images/orders/shield-personal.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения персонального щита.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t3-demolisher" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T3MobileArty.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т3 мобильная артиллерия ОФЗ «Разрушитель»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Снарядам основного орудия добавлено свойство «Обзор при взрыве», аналогичное Т1-артиллерии. После попадания снаряд временно открывает область вокруг точки взрыва.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li><b>Anti Matter Artillery:</b>
+                <ul>
+                  <li>Радиус обзора при взрыве снаряда: 10.</li>
+                  <li>Продолжительность обзора: 5 секунд.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t3-aeon-serenity-impact" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T3MobileArty.png?v=13-history-units" loading="lazy" alt="" /> Т3 мобильная артиллерия Эон «Спокойствие»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Область периодического урона снаряда теперь хорошо видна после попадания.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Добавлено длительное зелёное облако, которое показывает фактическую область периодического урона.</li>
+              <li>Визуальный эффект исчезает одновременно с завершением периодического урона.</li>
+            </ul>
+          </article>
+
+          <article id="hoplite" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/T2RangeBot.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 бот Кибран «Гоплит»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Гоплит теперь является очень полезным ботом с момента появления Т2 и до конца игры, выполняя роль Т1-артиллерии. Теперь он дополнительно снаряжён ЭМП-ракетами, которые наносят большой урон щитам. Также сокращено время строительства.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Время строительства: <s>1000</s> <i class="fa-solid fa-arrow-right"></i> 800 (Для Т2 завода: 20 секунд).</li>
+                  <li><b>Iridium Rocket Pack:</b>
+                    <ul>
+                      <li>3 ракеты по 60 урона (180 за залп).</li>
+                      <li>Радиус поражения: 2.</li>
+                      <li>Дальность: 38.</li>
+                      <li>Перезарядка: 4 секунды.</li>
+                    </ul>
+                  </li>
+                  <li>Добавлен второй боеприпас — <b>Radonium Rocket Pack (EMP):</b>
+                    <ul>
+                      <li>3 ЭМП-ракеты по 200 урона щитам (600 за залп).</li>
+                      <li>По обычным целям урон не наносится.</li>
+                      <li>Радиус поражения: 2.</li>
+                      <li>Дальность: 38.</li>
+                      <li>Перезарядка: 4 секунды.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="mongoose" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T2RangeBot.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 бот ОФЗ «Мангуст»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Гранатам вторичного орудия добавлено свойство «Обзор при взрыве», аналогичное Т1-артиллерии.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Время строительства: <s>1000</s> <i class="fa-solid fa-arrow-right"></i> 800 (Для Т2 завода: 20 секунд).</li>
+                  <li><b>Heavy Fragmentation Grenade Launcher:</b>
+                    <ul>
+                      <li>Каждая граната при взрыве открывает область вокруг точки попадания.</li>
+                      <li>Радиус обзора при взрыве снаряда: 5.</li>
+                      <li>Продолжительность обзора: 5 секунд.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="t2-pillar" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T2Tank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк ОФЗ «Пилар»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>Теперь «Пилар» является основным боевым танком, почти сопоставимым с «Обсидианом» и «Ил-Шавохом». Повышены живучесть и огневая мощь. Стоимость увеличена, время строительства сокращено.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Здоровье: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 2200.</li>
+              <li>Стоимость по массе: <s>280</s> <i class="fa-solid fa-arrow-right"></i> 300.</li>
+              <li>Время строительства: <s>1250</s> <i class="fa-solid fa-arrow-right"></i> 1160 (Для Т2 завода: 29 секунд).</li>
+              <li>Урон: <s>47,5</s> <i class="fa-solid fa-arrow-right"></i> 54.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="t2-riptide" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T2HoverTank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк ОФЗ «Рептайд»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>«Рептайд» переосмыслен как доступный ховер-танк ОФЗ: его прежняя стоимость не соответствовала боевым характеристикам. Теперь эти танки можно массово производить уже в начале игры даже на картах без воды — они полезны на раннем этапе и хорошо подходят для рейдов. Кроме того, все Т2 ховер-танки теперь передвигаются по водной глади быстрее.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Здоровье: <s>1800</s> <i class="fa-solid fa-arrow-right"></i> 1600.</li>
+              <li>Стоимость по массе: <s>320</s> <i class="fa-solid fa-arrow-right"></i> 250.</li>
+              <li>Стоимость по энергии: <s>1650</s> <i class="fa-solid fa-arrow-right"></i> 1360.</li>
+              <li>Время строительства: <s>1420</s> <i class="fa-solid fa-arrow-right"></i> 920 (Для Т2 завода: 23 секунды).</li>
+              <li>Дальность: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 20.</li>
+              <li>Скорость на суше: <s>3,7</s> <i class="fa-solid fa-arrow-right"></i> 3,9.</li>
+              <li>Скорость по водной глади: 5.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="t2-rhino" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/T2Tank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк Кибран «Носорог»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>Как и «Пилар», теперь «Носорог» по эффективности ближе к «Обсидиану» и «Ил-Шавоху». Повышены здоровье, стоимость и урон. Время строительства сокращено.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Здоровье: <s>1900</s> <i class="fa-solid fa-arrow-right"></i> 2000.</li>
+              <li>Стоимость по массе: <s>290</s> <i class="fa-solid fa-arrow-right"></i> 300.</li>
+              <li>Время строительства: <s>1300</s> <i class="fa-solid fa-arrow-right"></i> 1160 (Для Т2 завода: 29 секунд).</li>
+              <li>Урон: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 30.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="t2-wagner" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/T2HoverTank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк Кибран «Вагнер»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Т2 танк-амфибия «Вагнер», как и «Рептайд», стал дешевле: прежняя стоимость была слишком высокой для его эффективности на поле боя. В отличие от ховер-танков, «Вагнер» передвигается по дну; под водой его основное вооружение отключается и вместо него используется усиленная в прошлом обновлении торпедная установка. Благодаря сниженной стоимости и улучшенным характеристикам теперь это очень эффективный танк-амфибия.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Стоимость по массе: <s>280</s> <i class="fa-solid fa-arrow-right"></i> 240.</li>
+              <li>Стоимость по энергии: <s>1650</s> <i class="fa-solid fa-arrow-right"></i> 1280.</li>
+              <li>Время строительства: <s>1320</s> <i class="fa-solid fa-arrow-right"></i> 880 (Для Т2 завода: 22 секунды).</li>
+              <li>Скорость: <s>3,7</s> <i class="fa-solid fa-arrow-right"></i> 3,9.</li>
+              <li>Скорость под водой: 5.</li>
+              <li>Улучшено наведение ракеты ПТУР.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="obsidian" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T2Tank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк Эон «Обсидиан»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сокращено время строительства. «Обсидиан» получает усиление от <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов, так как у него есть персональный щит.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Время строительства: <s>1600</s> <i class="fa-solid fa-arrow-right"></i> 1280 (Для Т2 завода: 32 секунды).</li>
+                  <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>1750</s> <i class="fa-solid fa-arrow-right"></i> 2000 (+250).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="flame" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T2HoverTank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк Эон «Пламя»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сокращено время строительства. Как и остальные Т2 ховер-танки, «Пламя» получает увеличение скорости при движении по водной глади.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Время строительства: <s>900</s> <i class="fa-solid fa-arrow-right"></i> 720 (Для Т2 завода: 18 секунд).</li>
+                  <li>Скорость по водной глади: 5.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t2 Ilshawoh" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/T2Tank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 бот Серафим «Ил-Шавох»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сокращено время строительства.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Время строительства: <s>1600</s> <i class="fa-solid fa-arrow-right"></i> 1280 (Для Т2 завода: 32 секунды).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="yan-tzu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/T2HoverTank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 танк Серафим «Ян-Цзы»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Снижены стоимость по энергии и время строительства. Как и остальные Т2 ховер-танки, «Ян-Цзы» получает увеличение скорости при движении по водной глади.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Время строительства: <s>1050</s> <i class="fa-solid fa-arrow-right"></i> 840 (Для Т2 завода: 21 секунда).</li>
+              <li>Стоимость по энергии: <s>1400</s> <i class="fa-solid fa-arrow-right"></i> 1200.</li>
+              <li>Скорость по водной глади: 5.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="shield-aura-harbinger" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T3Tank.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 бот Эон «Стервятник»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Персональный щит включён в список целей Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>1000</s> <i class="fa-solid fa-arrow-right"></i> 2200 (+1200).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="shield-aura-asylum" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T2MobileShiled.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 мобильный щит Эон «Пристанище»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Купольный щит включён в список целей Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>3500</s> <i class="fa-solid fa-arrow-right"></i> 4000 (+500).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="shield-aura-fatboy" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T4Fatboy.png?v=13-clean-unit-icons-2" loading="lazy" /> Экспериментальный завод ОФЗ «Толстяк»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Купольный щит включён в список целей Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>20000</s> <i class="fa-solid fa-arrow-right"></i> 22500 (+2500).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="shield-aura-athanah" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/T3MobileShield.png?v=13-clean-unit-icons" loading="lazy" /> Т3 мобильный щит Серафим «Атанах»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Купольный щит включён в список целей Ауры щитов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Прочность щита под влиянием <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-vanilla-palettes-2" width="32" height="32" loading="lazy" alt="" />Ауры щитов: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 12500 (+2500).</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="aa-ual0205" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/aeon/land/T2MobileFlak.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т2 мобильная зенитка Эон «Восход»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость. Скорость по суше приведена к 3; уменьшен разброс и увеличена скорость снарядов. Теперь эти флаки стали более живучими и способны противостоять штурмовикам любого технологического уровня, а также Т2 истребителям-бомбардировщикам. Поскольку это Т2 ховер, ему также увеличили скорость передвижения по водной глади. Радар удалён.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1000</s> → 1700.</li><li>Стоимость по массе: <s>160</s> → 200.</li><li>Стоимость по энергии: <s>800</s> → 1600.</li><li>Скорость по суше: <s>2,7</s> → 3.</li><li>Разброс огня: <s>2,5</s> → 1,9.</li><li>Скорость снаряда: <s>20</s> → 25.</li><li>Радиус урона: <s>4</s> → 3.</li><li>Скорость по воде: <s>2,7</s> → 3,5.</li><li>Радиус радара: <s>52</s> → 0.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-uel0205" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/uef/land/T2MobileFlack.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т2 мобильная зенитка ОФЗ «Небесный щит»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость. Скорость по суше приведена к 3; уменьшен разброс и увеличена скорость снарядов. Теперь эти флаки стали более живучими и способны противостоять штурмовикам любого технологического уровня, а также Т2 истребителям-бомбардировщикам. Радар удалён.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1000</s> → 1700.</li><li>Стоимость по массе: <s>160</s> → 200.</li><li>Стоимость по энергии: <s>800</s> → 1600.</li><li>Скорость по суше: <s>3,1</s> → 3.</li><li>Разброс огня: <s>2,5</s> → 1,9.</li><li>Скорость снаряда: <s>20</s> → 25.</li><li>Радиус урона: <s>4</s> → 3.</li><li>Радиус радара: <s>52</s> → 0.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-url0205" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/cybran/land/T2MobileFlack.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т2 мобильная зенитка Кибран «Хлопушка»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость. Скорость по суше приведена к 3; уменьшен разброс и увеличена скорость снарядов. Теперь эти флаки стали более живучими и способны противостоять штурмовикам любого технологического уровня, а также Т2 истребителям-бомбардировщикам. Радар удалён.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1000</s> → 1700.</li><li>Стоимость по массе: <s>160</s> → 200.</li><li>Стоимость по энергии: <s>800</s> → 1600.</li><li>Скорость по суше: <s>2,9</s> → 3.</li><li>Разброс огня: <s>2,5</s> → 1,9.</li><li>Скорость снаряда: <s>20</s> → 25.</li><li>Радиус урона: <s>4</s> → 3.</li><li>Радиус радара: <s>52</s> → 0.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-xsl0205" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/sera/land/T2HoverFlack.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т2 мобильная зенитка Серафим «Яшавох»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость. Скорость по суше приведена к 3; уменьшен разброс и увеличена скорость снарядов. Теперь эти флаки стали более живучими и способны противостоять штурмовикам любого технологического уровня, а также Т2 истребителям-бомбардировщикам. Поскольку это Т2 ховер, ему также увеличили скорость передвижения по водной глади. Радар удалён.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1000</s> → 1700.</li><li>Стоимость по массе: <s>160</s> → 200.</li><li>Стоимость по энергии: <s>800</s> → 1600.</li><li>Скорость по суше: <s>2,6</s> → 3.</li><li>Разброс огня: <s>2,5</s> → 1,9.</li><li>Скорость снаряда: <s>20</s> → 25.</li><li>Радиус урона: <s>4</s> → 3.</li><li>Скорость по воде: <s>2,6</s> → 3,5.</li><li>Радиус радара: <s>52</s> → 0.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-dalk003" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/aeon/land/T3MobileAA.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т3 мобильная зенитка Эон «Спаситель»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость массы. Теперь стратегические бомбардировщики не смогут «оверкильнуть» Т3 зенитки.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1700</s> → 3200.</li><li>Стоимость по массе: <s>720</s> → 800.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-delk002" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/uef/land/T3MobileAA.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т3 мобильная зенитка ОФЗ «Кагуар»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость массы. Теперь стратегические бомбардировщики не смогут «оверкильнуть» Т3 зенитки.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1900</s> → 3200.</li><li>Стоимость по массе: <s>720</s> → 800.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-drlk001" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/cybran/land/T3MobileAA.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т3 мобильная зенитка Кибран «Скорпион»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Ракеты дополнительной наземной установки совершенно не попадали по наземным целям. Поэтому их точность увеличена за счёт более сильного доворота к цели и уменьшения разброса.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1900</s> → 3200.</li><li>Стоимость по массе: <s>720</s> → 800.</li><li>Сопровождение наземной цели: добавлено.</li><li>Скорость доворота наземных ракет: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 30.</li><li>Разброс наземных ракет: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 0,7.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-dslk004" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/sera/land/T3MobileAA.png?v=13-vanilla-palettes-2" loading="lazy" alt="" /> Т3 мобильная зенитка Серафим «Уйана»</h3><span class="tag rebalance">переработка</span></div>
+            <p>Увеличены прочность и стоимость массы. Теперь стратегические бомбардировщики не смогут «оверкильнуть» Т3 зенитки.</p>
+            <p><b>Изменения</b></p><ul><li><ul><li>Здоровье: <s>1800</s> → 3300.</li><li>Стоимость по массе: <s>720</s> → 800.</li></ul></li></ul>
+          </article>
+          <article id="t1-uef-mobile-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/land/T1MobileAA.png?v=13-t1-aa-lifetime" loading="lazy" alt="" /> Т1 мобильная зенитка ОФЗ «Стрелец»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>0,89</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+          <article id="t1-cybran-mobile-aa-ground-tracking" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/land/T1MobileAA.png?v=13-cybran-ground-tracking" loading="lazy" alt="" /> Т1 мобильная зенитка Кибран «Небесный бич»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Ракеты дополнительной наземной установки совершенно не попадали по наземным целям. Поэтому их точность увеличена за счёт более сильного доворота к цели и уменьшения разброса. Основные зенитные ракеты не изменены.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Сопровождение наземной цели: добавлено.</li>
+              <li>Скорость доворота наземных ракет: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 30.</li>
+              <li>Разброс наземных ракет: <s>1,5</s> <i class="fa-solid fa-arrow-right"></i> 1,05.</li>
+            </ul>
+          </article>
+
+          <article id="t1-aeon-mobile-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/land/T1MobileAA.png?v=13-t1-aa-lifetime" loading="lazy" alt="" /> Т1 мобильная зенитка Эон «Чертополох»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>0,97</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+          <article id="t1-seraphim-mobile-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/land/T1MobileAA-clean.png?v=13-t1-aa-clean" loading="lazy" alt="" /> Т1 мобильная зенитка Серафим «Я-истл»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>0,89</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+        </section>
+
+        <!-- Воздушные юниты -->
+        <section class="block group">
+          <h2>Воздушные юниты</h2>
+
+          <article id="Flood Air" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/air/T2Mercy.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 самолёт-снаряд Эон «Милосердие»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Возвращён разовый урон при попадании. Повышен урон, снижена скорость полёта.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Тип урона: постепенный <i class="fa-solid fa-arrow-right"></i> разовый.</li>
+                  <li>Урон: <s>2100</s> <i class="fa-solid fa-arrow-right"></i> 2400.</li>
+                  <li>Скорость полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 10.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air т2 Spektr" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/air/T2Gunship.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 штурмовик Эон «Спектр»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышены скорость и здоровье. Снижена высота полёта.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
+              <li>Скорость полёта: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+              <li>Здоровье: <s>848</s> <i class="fa-solid fa-arrow-right"></i> 850.</li>
+              <li>Орудие больше не атакует союзные цели и не наносит им урон.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="t2-uef-gunship" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/air/T2Gunship.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 штурмовик ОФЗ «Жало»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>Повышены скорость, здоровье и стоимость. Снижена высота полёта.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Стоимость по массе: <s>192</s> <i class="fa-solid fa-arrow-right"></i> 200.</li>
+              <li>Стоимость по энергии: <s>3840</s> <i class="fa-solid fa-arrow-right"></i> 4000.</li>
+              <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
+              <li>Скорость полёта: <s>13,5</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+              <li>Здоровье: <s>700</s> <i class="fa-solid fa-arrow-right"></i> 900.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air t2 Renegat" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/air/T2Gunship.png?v=13-clean-unit-icons-2" loading="lazy" /> Т2 штурмовик Кибран «Ренегат»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>Повышена скорость, снижена высота полёта. Значение здоровья скорректировано.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
+              <li>Скорость полёта: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+              <li>Здоровье: <s>832</s> <i class="fa-solid fa-arrow-right"></i> 830.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air t2 Wultu" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/air/T2Gunship.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 штурмовик Серафим «Вулту»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>Повышена скорость, снижены стоимость и высота полёта.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+<li>Стоимость по массе: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 450.</li>
+              <li>Стоимость по энергии: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 8100.</li>
+              <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
+              <li>Скорость полёта: <s>11</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air t3 Brodsworld" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/air/T3Gunship.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 тяжёлый штурмовик ОФЗ «Палаш»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышена скорость, снижена высота полёта.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air t3 Ueler" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/air/T3Gunship.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 тяжёлый штурмовик Кибран «Шахтёр»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышена скорость, снижена высота полёта.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Высота полёта: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 12.</li>
+                  <li>Скорость полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t3-aeon-restorer" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/air/T3AAGunship.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 штурмовик-истребитель Эон «Восстановитель»</h3>
+              <span class="tag rebalance">ребаланс</span>
+            </div>
+            <p>«Восстановитель» возвращён к прежней роли штурмовика-истребителя. Удалён расширенный режим настройки приоритетов целей, высота полёта увеличена.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Высота полёта: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 18.</li>
+                  <li>Расширенный режим настройки приоритетов целей: удалён.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="Flood Air3" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/air/T3ASF.png?v=13-vanilla-palettes-2" loading="lazy" /> Т3 истребитель ОФЗ «Оса»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Снижено потребление энергии системой помех.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Потребление энергии системой помех: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 15.</li>
+                  <li><img class="order-icon" src="../assets/images/orders/jamming.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения системы помех.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="t3-uef-strategic-bomber-fix" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/air/T3Strat.png?v=13-history-units" loading="lazy" alt="" /> Т3 стратегический бомбардировщик ОФЗ «Посол»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Исправлены заход на цель, разворот и момент сброса бомбы.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Дистанция выхода из атаки: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 50.</li>
+              <li>Скорость боевого разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Скорость разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Подъёмная сила: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 10.</li>
+              <li>Порог сброса бомбы: <s>3,5</s> <i class="fa-solid fa-arrow-right"></i> 8.</li>
+              <li>Добавлен небольшой разброс дистанции выхода из атаки.</li>
+            </ul>
+          </article>
+
+          <article id="t3-cybran-strategic-bomber-fix" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/air/T3Strat.png?v=13-history-units" loading="lazy" alt="" /> Т3 стратегический бомбардировщик Кибран «Призрак»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Исправлены заход на цель, разворот и момент сброса бомбы.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Дистанция выхода из атаки: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 50.</li>
+              <li>Скорость боевого разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Скорость разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Подъёмная сила: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 10.</li>
+              <li>Порог сброса бомбы: <s>3,5</s> <i class="fa-solid fa-arrow-right"></i> 8.</li>
+              <li>Добавлен небольшой разброс дистанции выхода из атаки.</li>
+            </ul>
+          </article>
+
+          <article id="t3-aeon-strategic-bomber-fix" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/air/T3Strat.png?v=13-history-units" loading="lazy" alt="" /> Т3 стратегический бомбардировщик Эон «Молот»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Исправлены заход на цель, разворот и момент сброса бомбы.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Дистанция выхода из атаки: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 50.</li>
+              <li>Скорость боевого разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Скорость разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Подъёмная сила: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 10.</li>
+              <li>Порог сброса бомбы: <s>3,5</s> <i class="fa-solid fa-arrow-right"></i> 8.</li>
+              <li>Добавлен небольшой разброс дистанции выхода из атаки.</li>
+            </ul>
+          </article>
+
+          <article id="t3-seraphim-strategic-bomber-fix" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/air/T3Strat.png?v=13-history-units" loading="lazy" alt="" /> Т3 стратегический бомбардировщик Серафим «Синта»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Исправлены заход на цель, разворот и момент сброса бомбы.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Дистанция выхода из атаки: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 50.</li>
+              <li>Скорость боевого разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Скорость разворота: <s>0,8</s> <i class="fa-solid fa-arrow-right"></i> 1,2.</li>
+              <li>Подъёмная сила: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 10.</li>
+              <li>Порог сброса бомбы: <s>3,5</s> <i class="fa-solid fa-arrow-right"></i> 8.</li>
+              <li>Добавлен небольшой разброс дистанции выхода из атаки.</li>
+            </ul>
+          </article>
+
+        </section>
+
+        <!-- Морские юниты -->
+        <section class="block group">
+          <h2>Морские юниты</h2>
+
+          <article id="t2-cybran-cruiser-ground-tracking" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/naval/T2Cruiser.png?v=13-cybran-ground-tracking" loading="lazy" alt="" /> Т2 крейсер Кибран «Сирена»</h3>
+              <span class="tag fix">исправление</span>
+            </div>
+            <p>Ракеты дополнительной наземной установки совершенно не попадали по наземным целям. Поэтому их точность увеличена за счёт более сильного доворота к цели и уменьшения разброса. Основные зенитные ракеты не изменены.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Сопровождение наземной цели: добавлено.</li>
+              <li>Скорость доворота наземных ракет: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 30.</li>
+              <li>Разброс наземных ракет: <s>0,9</s> <i class="fa-solid fa-arrow-right"></i> 0,63.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Структуры -->
+        <section class="block group">
+          <h2>Структуры</h2>
+
+          <article id="aa-ueb2204" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/uef/structure/T2StaticFlak.png?v=13-aa-amph" loading="lazy" alt="" /> Т2 стационарная зенитка ОФЗ «Небесный чистильщик»</h3><span class="tag rebalance">переработка</span></div>
+            <p>У «Небесного чистильщика» снижена стоимость производства и увеличена скорость полёта зенитного снаряда.</p>
+            <p><b>Изменения</b></p>
+            <ul><li><ul><li>Стоимость по массе: <s>400</s> → 220.</li><li>Стоимость по энергии: <s>4000</s> → 2200.</li><li>Скорость снаряда: <s>35</s> → 40.</li><li>Дальность: 50.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-urb2204" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/cybran/structure/T2StaticFlak.png?v=13-aa-amph" loading="lazy" alt="" /> Т2 стационарная зенитка Кибран «Подрывник»</h3><span class="tag rebalance">переработка</span></div>
+            <p>У «Подрывника» снижена стоимость производства, увеличены скорость полёта снаряда и дальность стрельбы.</p>
+            <p><b>Изменения</b></p>
+            <ul><li><ul><li>Стоимость по массе: <s>400</s> → 220.</li><li>Стоимость по энергии: <s>4000</s> → 2200.</li><li>Скорость снаряда: <s>30</s> → 40.</li><li>Дальность: <s>44</s> → 50.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-uab2204" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/aeon/structure/T2Flack.png?v=13-aa-amph" loading="lazy" alt="" /> Т2 стационарная зенитка Эон «Марр»</h3><span class="tag rebalance">переработка</span></div>
+            <p>У «Марра» снижена стоимость производства и увеличена скорость полёта зенитного снаряда.</p>
+            <p><b>Изменения</b></p>
+            <ul><li><ul><li>Стоимость по массе: <s>400</s> → 220.</li><li>Стоимость по энергии: <s>4000</s> → 2200.</li><li>Скорость снаряда: <s>35</s> → 40.</li><li>Дальность: 50.</li></ul></li></ul>
+          </article>
+
+          <article id="aa-xsb2204" class="block card">
+            <div class="flex-title"><h3><img src="../assets/images/units/sera/structure/T2StaticFlack.png?v=13-aa-amph" loading="lazy" alt="" /> Т2 стационарная зенитка Серафим «Синната»</h3><span class="tag rebalance">переработка</span></div>
+            <p>У «Синнаты» снижена стоимость производства, увеличены скорость полёта снаряда и дальность стрельбы.</p>
+            <p><b>Изменения</b></p>
+            <ul><li><ul><li>Стоимость по массе: <s>400</s> → 220.</li><li>Стоимость по энергии: <s>4000</s> → 2200.</li><li>Скорость снаряда: <s>35</s> → 40.</li><li>Дальность: <s>44</s> → 50.</li></ul></li></ul>
+          </article>
+
+          <article id="T4 Salvo" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/structure/T4RapidArty.png?v=13-vanilla-palettes-2" loading="lazy" /> Экспериментальная артиллерия Эон «Избавление»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Усилен бонус к скорострельности от соседних генераторов энергии.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Бонус к скорострельности от генераторов: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 40.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="mass fab t3" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/balances/7/mas%20fab.png?v=13-vanilla-palettes-2" loading="lazy" /> Масс-фабрикаторы Т3</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Уменьшен радиус взрыва при уничтожении.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Радиус взрыва при уничтожении: <s>14</s> <i class="fa-solid fa-arrow-right"></i> 10.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T3 Sonar Cybran" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/structure/T3Sonar.png?v=13-clean-unit-icons" loading="lazy" /> Т3 сонар Кибран «Поток XR»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышен подводный обзор, снижено потребление энергии. Добавлено управление полем невидимости.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Потребление энергии: <s>1200</s> <i class="fa-solid fa-arrow-right"></i> 600.</li>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 75.</li>
+                  <li><img class="order-icon" src="../assets/images/orders/stealth.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения поля невидимости.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T3 Sonar UEF" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/structure/T3Sonar.png?v=13-clean-unit-icons" loading="lazy" /> Т3 сонар ОФЗ «SP3-3000»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышен подводный обзор. Добавлено управление полем помех.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 75.</li>
+                  <li><img class="order-icon" src="../assets/images/orders/jamming.png?v=13-verified-orders" loading="lazy" alt="" />Добавлена кнопка включения и выключения поля помех.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T3 Sonar Aeon" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/structure/T3Sonar.png?v=13-clean-unit-icons" loading="lazy" /> Т3 сонар Эон</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышены подводный обзор и урон антиторпедной системы.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 75.</li>
+                  <li>Урон антиторпеды: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 3.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T2 Sonar Cybran" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/structure/T2Sonar.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 сонар Кибран «Поток»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сонар получил возможность передвижения и увеличенный подводный обзор. Во время улучшения до T3 сонар остаётся неподвижным.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Тип: стационарный <i class="fa-solid fa-arrow-right"></i> мобильный.</li>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 65.</li>
+                  <li>Скорость: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2,8.</li>
+                  <li>Во время улучшения до T3 движение блокируется.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T2 Sonar UEF" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/structure/T2Sonar.png?v=13-clean-unit-icons-2" loading="lazy" /> Т2 сонар ОФЗ «ГК2-2000»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сонар получил возможность передвижения и увеличенный подводный обзор. Во время улучшения до T3 сонар остаётся неподвижным.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Тип: стационарный <i class="fa-solid fa-arrow-right"></i> мобильный.</li>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 65.</li>
+                  <li>Скорость: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2,8.</li>
+                  <li>Во время улучшения до T3 движение блокируется.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T2 Sonar Aeon" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/structure/T2Sonar.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 сонар Эон</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Сонар получил возможность передвижения и увеличенный подводный обзор. Во время улучшения до T3 сонар остаётся неподвижным.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Тип: стационарный <i class="fa-solid fa-arrow-right"></i> мобильный.</li>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 65.</li>
+                  <li>Скорость: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2,8.</li>
+                  <li>Во время улучшения до T3 движение блокируется.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article id="T2 Sonar Seraphim" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/structure/T2Sonar.png?v=13-vanilla-palettes-2" loading="lazy" /> Т2 сонар Серафим «Шу-есель»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Повышены радиус сонара, подводный обзор и скорость передвижения.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>
+                <ul>
+                  <li>Радиус сонара: <s>348</s> <i class="fa-solid fa-arrow-right"></i> 350.</li>
+                  <li>Подводный обзор: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 70.</li>
+                  <li>Скорость на поверхности: <s>2,8</s> <i class="fa-solid fa-arrow-right"></i> 3,5.</li>
+                  <li>Скорость под водой: <s>1,68</s> <i class="fa-solid fa-arrow-right"></i> 2,1.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article id="t1-uef-static-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/uef/structure/T1StaticAA-exact.png?v=13-t1-aa-amph" loading="lazy" alt="" /> Т1 стационарная зенитка ОФЗ «Автопушка DA1»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>1,22</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+          <article id="t1-cybran-static-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/cybran/structure/T1StaticAA-exact.png?v=13-t1-aa-amph" loading="lazy" alt="" /> Т1 стационарная зенитка Кибран «Игла»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>1,22</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+          <article id="t1-aeon-static-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/aeon/structure/T1StaticAA-exact.png?v=13-t1-aa-amph" loading="lazy" alt="" /> Т1 стационарная зенитка Эон «Искатель»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>1,22</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+          <article id="t1-seraphim-static-aa-projectile" class="block card">
+            <div class="flex-title">
+              <h3><img src="../assets/images/units/sera/structure/T1StaticAA-exact.png?v=13-t1-aa-amph" loading="lazy" alt="" /> Т1 стационарная зенитка Серафим «Ялла»</h3>
+              <span class="tag buff">бафф</span>
+            </div>
+            <p>Некоторые снаряды не долетали до воздушных целей, летящих на большой высоте. Поэтому увеличено время жизни снарядов.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li>Скорость снаряда: 45.</li>
+              <li>Время жизни снаряда: <s>1,22</s> <i class="fa-solid fa-arrow-right"></i> 1,30 секунды.</li>
+            </ul>
+          </article>
+
+        </section>
+
+        <!-- Новые иконки командиров -->
+        <section class="block group">
+          <h2>Новые иконки БМК и АКБП</h2>
+
+          <article id="commander-icons" class="block card">
+            <div class="flex-title">
+              <h3>Улучшения и пресеты</h3>
+              <span class="tag rebalance">новые иконки</span>
+            </div>
+            <p>Обновлено визуальное оформление улучшений и ключевых боевых пресетов БМК и АКБП.</p>
+            <p><b>Изменения</b></p>
+            <ul>
+              <li><img class="upgrade-icon" src="../assets/images/aeon-aura-green/upgrades_entropy_up.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> <img class="upgrade-icon" src="../assets/images/upgrades/shield_aura_up.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> Эон АКБП: Поле Энтропии и Усилитель щитов.</li>
+              <li><img class="upgrade-icon" src="../assets/images/upgrades/shield_light_up.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> <img class="upgrade-icon" src="../assets/images/upgrades/shield_heavy_up.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> ОФЗ АКБП: лёгкий и тяжёлый купольные щиты.</li>
+              <li><img class="upgrade-icon" src="../assets/images/final-icons/seraphim/regen_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" /> <img class="upgrade-icon" src="../assets/images/final-icons/seraphim/health_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" /> Серафим АКБП: Поле восстановления и Поле жизнестойкости.</li>
+              <li><img class="upgrade-icon" src="../assets/images/final-icons/uef/jammer.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" /> ОФЗ АКБП: Генератор помех.</li>
+              <li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/personal_stealth.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" /> <img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" /> Кибран БМК и АКБП: Персональный стелс-генератор и Стелс-поле.</li>
+              <li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/speed_aura.png?v=13-final-icons" width="32" height="32" loading="lazy" alt="" /> Кибран АКБП: Поле кинетического ускорения.</li>
+              <li><img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_Defiler_icon.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/aeon-aura-green/presets_UAL0301_Aegis_icon.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/final-icons/presets/UAL0301_Heretic.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> Эон АКБП: пресеты «Осквернитель», «Эгида» и «Иноверец».</li>
+              <li><img class="preset-icon" src="../assets/images/presets/UEL0301_LastBastion_icon.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/presets/UEL0301_Mountain_icon.png?v=13-icons-complete" width="48" height="48" loading="lazy" alt="" /> ОФЗ АКБП: пресеты «Последний оплот» и «Гора».</li>
+              <li><img class="preset-icon" src="../assets/images/final-icons/presets/URL0301_CrossFighter.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/final-icons/presets/URL0301_Veil.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/final-icons/presets/URL0301_Mirage.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> Кибран АКБП: пресеты «Кросс-Файтер», «Вуаль» и «Мираж».</li>
+              <li><img class="preset-icon" src="../assets/images/final-icons/presets/XSL0301_SethToth.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/final-icons/presets/XSL0301_SethIyah.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> <img class="preset-icon" src="../assets/images/final-icons/presets/XSL0301_SethUhtheIyah.png?v=13-final-icons" width="48" height="48" loading="lazy" alt="" /> Серафим АКБП: пресеты «Сетх-Тотх», «Сетх-Ях» и «Сетх-Узе-Ях».</li>
+            </ul>
+            <h4>Новые кнопки включения и выключения</h4>
+            <ul>
+              <li><img class="order-icon" src="../assets/images/buttons/sacu-entropy-aura.png?v=13-controls" loading="lazy" alt="" /> <img class="order-icon" src="../assets/images/buttons/sacu-shield-aura.png?v=13-controls" loading="lazy" alt="" /> Эон АКБП: Поле Энтропии и Усилитель щитов.</li>
+              <li><img class="order-icon" src="../assets/images/buttons/sacu-speed-aura.png?v=13-controls" loading="lazy" alt="" /> Кибран АКБП: Поле кинетического ускорения.</li>
+              <li><img class="order-icon" src="../assets/images/buttons/sacu-restoration-aura.png?v=13-controls" loading="lazy" alt="" /> Серафим БМК и АКБП: регенерирующие поля и Поле восстановления.</li>
+              <li><img class="order-icon" src="../assets/images/buttons/sacu-vitality-aura.png?v=13-controls" loading="lazy" alt="" /> Серафим АКБП: Поле жизнестойкости.</li>
+              <li><img class="upgrade-icon" src="../assets/images/upgrades/aeon/sensor.png?v=13-controls" loading="lazy" alt="" /> Эон БМК, а также АКБП всех фракций: улучшенные сенсоры.</li>
+              <li><img class="upgrade-icon" src="../assets/images/final-icons/uef/jammer.png?v=13-controls" loading="lazy" alt="" /> ОФЗ АКБП, Т3 истребитель «Оса» и Т3 сонар «SP3-3000»: поле помех.</li>
+              <li><img class="upgrade-icon" src="../assets/images/final-icons/cybran/stealth_aura.png?v=13-controls" loading="lazy" alt="" /> Кибран АКБП и Т3 сонар «Поток XR»: поле невидимости.</li>
+              <li><img class="upgrade-icon" src="../assets/images/upgrades/shield_light_up.png?v=13-controls" loading="lazy" alt="" /> <img class="upgrade-icon" src="../assets/images/upgrades/faf/uef/personalshield.png?v=13-controls" loading="lazy" alt="" /> ОФЗ АКБП и «Титан»: купольный и персональный щиты.</li>
+            </ul>
+          </article>
+
+        </section>
+      </div>
+
+      <!-- Сайдбар -->
+      <div class="sidebar">
+        <div class="icon-sidebar-wrapper">
+          <div class="icon-sidebar">
+            <div class="icon-sidebar-inner">
+              <div class="sticky-navigation icon-sidebar-subgrid">
+                <h2 class="text-center">Навигация</h2>
+                <a tabindex="0" onclick="history?.back()" onkeypress="history?.back()" class="clickable"><i class="fa-solid fa-arrow-left"></i><br />назад</a>
+                <a href="../index.html"><i class="fa-solid fa-list"></i><br />патчи</a>
+                <a tabindex="0" onclick="toggleTheme()" onkeypress="toggleTheme()" class="clickable"><i class="theme-icon fa-solid fa-moon"></i><br />тема</a>
+                <a tabindex="0" onclick="history?.forward()" onkeypress="history?.forward()" class="clickable"><i class="fa-solid fa-arrow-right"></i><br />вперёд</a>
+              </div>
+              <div class="navigation"><!-- autogenerated navigation --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="../index.html">к списку патчей</a> | <a href="#top">наверх</a></p>
+      <p><a href="https://gapforever.com/" target="_blank">GapForever.com</a> © 2015-<span class="year">2025</span></p>
+    </footer>
+  </body>
+</html>
